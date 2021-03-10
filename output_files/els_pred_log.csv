@@ -1,0 +1,2 @@
+implementation,run_num,els,rp_sim,batch_size,epochs,folder,model_file,variant,rep,file_name,imp,lstm_act,dense_act,optim,norm_method,model_type,n_size,l_size,scale_args,max_trace_size,additional_columns,num_cases
+random_choice,0,0.6986285704810943,0.85,32,2,20201212_AED453B8_A230_499B_A484_BEB46DF74E36,model_shared_cat_02-1.03.h5,random_choice,1,Helpdesk.xes,1,,linear,Nadam,lognorm,shared_cat,5,100,"{'max_value': 15.460402676082738, 'min_value': 0.0}",15,[],1323
