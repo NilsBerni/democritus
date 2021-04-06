@@ -2,8 +2,8 @@
 """
 @author: Manuel Camargo
 """
-import getopt
 import sys
+import getopt
 
 from implementations.Camargo.model_prediction import model_predictor as pr
 from implementations.Camargo.model_training import model_trainer as tr

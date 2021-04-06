@@ -5,11 +5,11 @@ Created on Sat Mar 14 19:13:15 2020
 @author: Manuel Camargo
 """
 import itertools
+import numpy as np
 import random
 
-import keras.utils as ku
-import numpy as np
 from nltk.util import ngrams
+import keras.utils as ku
 
 
 class SequencesCreator():

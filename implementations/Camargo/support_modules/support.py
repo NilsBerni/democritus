@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
-import csv
+from sys import stdout
+import numpy as np
 import datetime
-import json
 import os
+import csv
+import uuid
+import json
 import platform as pl
 import time
-import uuid
-from sys import stdout
-
-import numpy as np
 
 
 def folder_id():

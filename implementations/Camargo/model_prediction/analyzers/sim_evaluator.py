@@ -3,17 +3,19 @@ Created on Fri Jan 10 11:40:46 2020
 
 @author: Manuel Camargo
 """
-import itertools
 import random
+import itertools
 from operator import itemgetter
 
 import jellyfish as jf
-import numpy as np
-import pandas as pd
 from scipy.optimize import linear_sum_assignment
 
 from implementations.Camargo.model_prediction.analyzers import alpha_oracle as ao
 from implementations.Camargo.model_prediction.analyzers.alpha_oracle import Rel
+
+
+import pandas as pd
+import numpy as np
 
 
 class Evaluator():

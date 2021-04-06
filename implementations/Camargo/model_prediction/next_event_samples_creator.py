@@ -6,8 +6,8 @@ Created on Tue Mar 17 20:28:18 2020
 """
 import itertools
 
-import numpy as np
 import pandas as pd
+import numpy as np
 
 
 class NextEventSamplesCreator():

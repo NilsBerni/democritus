@@ -4,10 +4,10 @@ Created on Wed Mar 18 17:11:17 2020
 
 @author: Manuel Camargo
 """
-import datetime
-from datetime import timedelta
-
 import numpy as np
+import datetime
+
+from datetime import timedelta
 
 from implementations.Camargo.support_modules import support as sup
 

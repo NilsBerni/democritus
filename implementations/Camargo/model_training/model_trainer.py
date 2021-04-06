@@ -4,20 +4,23 @@ Created on Thu Mar 12 15:07:19 2020
 
 @author: Manuel Camargo
 """
-import configparser as cp
-import csv
-import glob
-import itertools
 import os
+import glob
+
+import csv
+import itertools
+
+import pandas as pd
+import numpy as np
+import configparser as cp
+
 from operator import itemgetter
 
-import numpy as np
-import pandas as pd
+from implementations.Camargo.support_modules.readers import log_reader as lr
+from implementations.Camargo.support_modules import support as sup
 
 from implementations.Camargo.model_training import model_loader as mload, samples_creator as exc, \
     features_manager as feat, embedding_training as em
-from implementations.Camargo.support_modules import support as sup
-from implementations.Camargo.support_modules.readers import log_reader as lr
 
 
 class ModelTrainer():

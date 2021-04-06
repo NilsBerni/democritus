@@ -5,11 +5,10 @@ Created on Tue Nov 12 17:21:35 2019
 @author: Manuel Camargo
 """
 import os
-from time import time
-
 import numpy as np
-from keras.callbacks import Callback
 
+from time import time
+from keras.callbacks import Callback
 from implementations.Camargo.support_modules import support as sup
 
 

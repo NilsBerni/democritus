@@ -6,8 +6,8 @@ Created on Wed Mar 18 10:03:26 2020
 """
 import itertools
 
-import numpy as np
 import pandas as pd
+import numpy as np
 
 
 class SuffixSamplesCreator():

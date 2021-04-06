@@ -5,8 +5,8 @@ Created on Wed Nov 13 23:56:26 2019
 @author: Manuel Camargo
 """
 
-import datetime
 import os
+import datetime
 
 from keras.callbacks import Callback
 

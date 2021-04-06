@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import datetime
-import gzip
-import itertools as it
-import os
 import xml.etree.ElementTree as ET
+import gzip
 import zipfile as zf
-from operator import itemgetter
+import os
+import itertools as it
 
 import pandas as pd
+from operator import itemgetter
 
 from implementations.Camargo.support_modules import support as sup
 
