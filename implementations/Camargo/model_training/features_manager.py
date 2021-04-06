@@ -4,11 +4,11 @@ Created on Sat Mar 14 19:18:18 2020
 
 @author: Manuel Camargo
 """
-import pandas as pd
-import numpy as np
-
 import itertools
 from operator import itemgetter
+
+import numpy as np
+import pandas as pd
 
 from implementations.Camargo.support_modules import role_discovery as rl
 

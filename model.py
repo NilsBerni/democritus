@@ -1,6 +1,7 @@
-import tensorflow as tf 
-import numpy as np
 import cv2
+import numpy as np
+import tensorflow as tf
+
 
 def load_graph(graph_pb_path):
     with open(graph_pb_path, 'rb') as f:

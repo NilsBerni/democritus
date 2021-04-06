@@ -4,14 +4,14 @@ Created on Wed Nov 21 21:23:55 2018
 
 @author: Manuel Camargo
 """
-import os
-import random
 import itertools
 import math
-import numpy as np
+import os
+import random
 
-from keras.models import Model
+import numpy as np
 from keras.layers import Input, Embedding, Dot, Reshape
+from keras.models import Model
 
 from implementations.Camargo.support_modules import support as sup
 

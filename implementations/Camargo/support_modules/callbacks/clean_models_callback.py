@@ -5,11 +5,11 @@ Created on Wed Nov 13 23:56:26 2019
 @author: Manuel Camargo
 """
 
-import os
 import datetime
+import os
 
 from keras.callbacks import Callback
- 
+
 
 class CleanSavedModelsCallback(Callback):
     def __init__(self, output_folder, num_models):

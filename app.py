@@ -1,8 +1,11 @@
-from implementations.Camargo.camargo import Camargo
+import cv2
+import model
+import os
 
-from flask import Flask, render_template, jsonify, request
 import werkzeug
-import base64, os, model, cv2
+from flask import Flask, render_template, jsonify, request
+
+from implementations.Camargo.camargo import Camargo
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static'

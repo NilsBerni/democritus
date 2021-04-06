@@ -4,20 +4,18 @@ Created on Tue Mar 17 10:49:28 2020
 
 @author: Manuel Camargo
 """
-import os
-import json
-
-import pandas as pd
-import numpy as np
 import configparser as cp
+import json
+import os
 
+import numpy as np
+import pandas as pd
 from tensorflow.keras.models import load_model
-
-from implementations.Camargo.support_modules.readers import log_reader as lr
-from implementations.Camargo.support_modules import support as sup
 
 from implementations.Camargo.model_prediction import interfaces as it
 from implementations.Camargo.model_prediction.analyzers import sim_evaluator as ev
+from implementations.Camargo.support_modules import support as sup
+from implementations.Camargo.support_modules.readers import log_reader as lr
 
 
 class ModelPredictor():
