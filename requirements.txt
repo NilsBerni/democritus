@@ -7,7 +7,6 @@ Cython==0.29.22
 decorator==5.0.5
 Flask==1.1.2
 gast==0.4.0
-google-pasta==0.2.0
 grpcio==1.36.1
 gunicorn==20.1.0
 importlib-metadata==3.10.0
@@ -18,7 +17,6 @@ joblib==1.0.1
 Keras==2.4.3
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.2
-Markdown==3.3.4
 MarkupSafe==1.1.1
 mkl-fft==1.0.6
 mkl-random==1.0.1
