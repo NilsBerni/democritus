@@ -7,15 +7,17 @@ Created on Thu Feb 28 10:15:12 2019
 # import keras.backend as K
 
 import os
-# import numpy as np
 
-from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Embedding, Concatenate
-from tensorflow.keras.layers import Dense, LSTM, BatchNormalization
-from tensorflow.keras.optimizers import Nadam, Adam, SGD, Adagrad
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+from tensorflow.keras.layers import Dense, LSTM, BatchNormalization
+from tensorflow.keras.layers import Input, Embedding, Concatenate
+from tensorflow.keras.models import Model
+from tensorflow.keras.optimizers import Nadam, Adam, SGD, Adagrad
 
 from implementations.Camargo.support_modules.callbacks import time_callback as tc, clean_models_callback as cm
+
+
+# import numpy as np
 
 
 def _training_model(vec, ac_weights, rl_weights, output_folder, args):

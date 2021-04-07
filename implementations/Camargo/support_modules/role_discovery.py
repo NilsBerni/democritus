@@ -1,10 +1,12 @@
 ﻿# -*- coding: utf-8 -*-
+from operator import itemgetter
+
+import networkx as nx
+import pandas as pd
 import scipy
 from scipy.stats import pearsonr
-import networkx as nx
+
 from implementations.Camargo.support_modules import support as sup
-from operator import itemgetter
-import pandas as pd
 
 
 class ResourcePoolAnalyser():
