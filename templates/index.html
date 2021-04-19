@@ -1,113 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
-
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>democritus</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
+
 <body>
+    <section class="contact-clean">
+        <form method="post">
+            <h1 style="text-align: center;">Democritus</h1>
+            <h4 class="text-center" style="text-align: center;height: 66px;">Neural Network based&nbsp; Predictive Process Monitoring</h4><strong>RP SIM</strong>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div><strong>RP SIM</strong>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div><strong>EPOCHS</strong>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div><strong>MODEL SPEC</strong>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div><strong>IMPLEMENTATION</strong>
+            <div class="form-group"><select class="form-control">
+                    <optgroup label="This is a group">
+                        <option value="12" selected="">This is item 1</option>
+                        <option value="13">This is item 2</option>
+                        <option value="14">This is item 3</option>
+                    </optgroup>
+                </select></div><strong>PREDICTION TYPE</strong>
+            <div class="form-group">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">Prefix</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">Next Event<br></label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Remaining Time</label></div>
+            </div><strong>EVENT LOG UPLOAD</strong>
+            <div class="form-group"><input class="form-control-file" type="file"></div><strong></strong>
+            <div class="form-group"><small class="form-text text-danger"></small></div>
+            <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">RUN&nbsp;</button></div>
+        </form>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
 
-    <div class="main">
-
-        <div class="container">
-            <div class="signup-content">
-                <div class="signup-img">
-                    <img src="../static/images/form-img.jpg" alt="">
-                    <div class="signup-img-content">
-                        <h2>Democritus </h2>
-                        <p>while seats are available !</p>
-                    </div>
-                </div>
-                <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <div class="form-input">
-                                    <label for="rp_sim" class="required">rp_sim</label>
-                                    <input type="text" name="rp_sim" id="rp_sim" />
-                                </div>
-                                <div class="form-input">
-                                    <label for="batch_size" class="required">batch_size</label>
-                                    <input type="text" name="batch_size" id="batch_size" />
-                                </div>
-                                <div class="form-input">
-                                    <label for="epochs" class="required">epochs</label>
-                                    <input type="text" name="epochs" id="epochs" />
-                                </div>
-                                <div class="form-input">
-                                    <label for="models_spec" class="required">models_spec</label>
-                                    <input type="text" name="models_spec" id="models_spec" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-select">
-                                    <div class="label-flex">
-                                        <label for="implementation">implementation</label>
-                                        <a href="#" class="form-link">Implementation detail</a>
-                                    </div>
-                                    <div class="select-list">
-                                        <select name="implementation" id="implementation
-">
-                                            <option value="Camargo">Camargo</option>
-                                            <option value="Tax">Tax</option>
-                                            <option value="Evermann">Evermann</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-radio">
-                                    <div class="label-flex">
-                                        <label for="prediction_type">Prediction Type</label>
-                                        <a href="#" class="form-link">Prediction Type</a>
-                                    </div>
-                                    <div class="form-radio-group">            
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="prediction_type" id="prefix" checked>
-                                            <label for="prefix">Prefix</label>
-                                            <span class="check"></span>
-                                        </div>
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="prediction_type" id="next_event">
-                                            <label for="next_event">Next Event</label>
-                                            <span class="check"></span>
-                                        </div>
-                                        <div class="form-radio-item">
-                                            <input type="radio" name="prediction_type" id="remaining_time">
-                                            <label for="remaining_time">Remaining Time</label>
-                                            <span class="check"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-input">
-                                    <label for="event_log">Event Log Upload</label>
-                                    <input type="text" name="event_log" id="event_log" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-submit">
-                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
-                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
