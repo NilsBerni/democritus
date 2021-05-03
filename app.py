@@ -16,7 +16,7 @@ def index():
 
 # Routing to all html templates
 @app.route('/<string:htmltemp>')
-def advisor(htmltemp):
+def router(htmltemp):
     return render_template(htmltemp)
 
 
