@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>democritus</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <section class="contact-clean">
+        <form method="post">
+            <h1 style="text-align: center;">Train</h1><strong>Implementation</strong>
+            <div class="form-group"><input type="text" class="form-control" placeholder="0.85" name="rp_sim" /></div><strong>Batch Size</strong>
+            <div class="form-group"><input type="text" class="form-control" name="batch_size" placeholder="Usually 32, 64, 128 or 256" /></div><strong>EPOCHS</strong>
+            <div class="form-group"><input type="text" class="form-control" name="epochs" placeholder="2" /></div><strong>MODEL TYPE</strong>
+            <div class="form-group"><select class="form-control">
+                    <optgroup label="This is a group">
+                        <option value="12" selected>shared_cat</option>
+                        <option value="13">specialized</option>
+                        <option value="14">concatenated</option>
+                        <option value>shared_cat_gru</option>
+                        <option value>specialized_gru</option>
+                        <option value>concatenated_gru</option>
+                    </optgroup>
+                </select></div><strong>EVENT LOG UPLOAD</strong>
+            <div class="form-group"><input type="file" class="form-control-file" /></div><strong>IMPLEMENTATION</strong>
+            <div class="form-group"><select class="form-control">
+                    <optgroup label="This is a group">
+                        <option value="12" selected>Camargo</option>
+                        <option value="13">Tax</option>
+                        <option value="14">Lin</option>
+                    </optgroup>
+                </select></div><strong>PREDICTION TYPE</strong>
+            <div class="form-group"><select class="form-control">
+                    <optgroup label="This is a group">
+                        <option value="12" selected>Prefix</option>
+                        <option value="13">Next Event</option>
+                        <option value="14">Remaining Time</option>
+                    </optgroup>
+                </select></div><strong></strong><strong></strong>
+            <div class="form-group"><small class="form-text text-danger"></small></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">RUN </button></div>
+        </form>
+    </section>
+</body>
+</html>

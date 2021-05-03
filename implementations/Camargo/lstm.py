@@ -9,7 +9,7 @@ from implementations.Camargo.model_prediction import model_predictor as pr
 from implementations.Camargo.model_training import model_trainer as tr
 
 
-class Camargo:
+class lstm:
 
     def catch_parameter(self, opt):
         """Change the captured parameters names"""

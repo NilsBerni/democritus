@@ -5,7 +5,7 @@ import os
 import werkzeug
 from flask import Flask, render_template, jsonify, request
 
-from implementations.Camargo.camargo import Camargo
+from implementations.Camargo.lstm import lstm
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static'
@@ -14,7 +14,13 @@ UPLOAD_FOLDER = 'static'
 def index():
     return render_template("index.html")
 
-@app.route("/results",methods=['GET','POST'])
+# Routing to all html templates
+@app.route('/<string:htmltemp>')
+def advisor(htmltemp):
+    return render_template(htmltemp)
+
+
+@app.route("/results", methods=['GET', 'POST'])
 def results():
     if request.method == 'POST':
         upload_file = request.files['file']
