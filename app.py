@@ -5,7 +5,7 @@ import os
 import werkzeug
 from flask import Flask, render_template, jsonify, request
 
-from implementations.Camargo.lstm import lstm
+from App.run_advise.advisor import Advisor
 
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static'
@@ -19,6 +19,19 @@ def index():
 def router(htmltemp):
     return render_template(htmltemp)
 
+@app.route('/advise', methods = ['GET', 'POST'])
+def advise():
+   if request.method == 'POST':
+
+      try:
+          file = request.files['file']
+          advisor = Advisor()
+          advisor.learn(xes_file=file)
+          result = advisor.think()
+      except:
+          result = "unsupported file"
+
+      return result
 
 @app.route("/results", methods=['GET', 'POST'])
 def results():

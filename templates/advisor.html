@@ -9,10 +9,20 @@
 </head>
 <body style="background: rgb(241,247,252);">
     <section class="contact-clean" style="background: rgb(241, 247, 252);">
-        <form method="post">
+        <form action = "/advise"  method="post" enctype = "multipart/form-data">
             <h1 style="text-align: center;">Advisor</h1>
-            <h4 class="text-center" style="text-align: center;height: 99px;">Find the right suggestion for your event log based on author suggestions and literature. </h4><strong></strong><strong>EVENT LOG UPLOAD</strong>
-            <div class="form-group"><input type="file" class="form-control-file" /></div><strong></strong>
+            <h4 class="text-center" style="text-align: center;height: 99px;">Find the right suggestion for your event log based on author suggestions and literature. </h4>
+            <strong></strong>
+            <strong>PREDICTION TYPE</strong>
+            <div class="form-group"><select class="form-control">
+              <optgroup label="This is a group">
+                  <option value="12" selected>Prefix</option>
+                  <option value="13">Next Event</option>
+                  <option value="14">Remaining Time</option>
+              </optgroup>
+            </select></div>
+            <strong>EVENT LOG UPLOAD</strong>
+            <div class="form-group"><input type="file" name = "file" class="form-control-file" /></div><strong></strong>
             <div class="form-group"><small class="form-text text-danger"></small></div>
             <div class="form-group"><button class="btn btn-primary" type="submit">RUN </button></div>
         </form>

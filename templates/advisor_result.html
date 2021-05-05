@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>democritus</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body style="background: rgb(241,247,252);">
+    <section class="contact-clean" style="background: rgb(241, 247, 252);">
+        <form method="post">
+            <h1 style="text-align: center;">Advisor</h1>
+            <h4 class="text-center" style="text-align: center;height: 99px;">Find the right suggestion for your event log based on author suggestions and literature. </h4><strong></strong><strong></strong>
+            <div class="form-group"><small class="form-text text-danger"></small></div>
+            <div class="form-row">
+                <div class="col"><strong>Events: {{ events }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Traces: {{ traces }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Activities: {{ activities }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Average Events Per Trace: {{ avg_events_per_trace }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Max Trace Length: {{ max_trace_length }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Average Event Duration: {{ avg_event_duration }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col"><strong>Max Event Duration: {{ max_event_duration }}</strong></div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div role="alert" class="alert alert-info" style="margin-top: 16px;"><span><strong>Suggestion: </strong>{{ suggestion }}</span></div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
