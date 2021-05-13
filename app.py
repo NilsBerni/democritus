@@ -1,4 +1,12 @@
+import base64
+
+import matplotlib.pyplot as plt
+import io
+import base64
+
 import cv2
+
+
 import model
 import os
 
@@ -19,7 +27,8 @@ def index():
 def router(htmltemp):
     return render_template(htmltemp)
 
-@app.route('/advise', methods = ['GET', 'POST'])
+
+@app.route('/advise', methods=['GET', 'POST'])
 def advise():
    if request.method == 'POST':
 

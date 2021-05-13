@@ -14,13 +14,13 @@ class Decider:
     # BENCHMARKS
     # these determine the average values of popular event logs
     def getAverageDict(self):
-        events = 21348
-        traces = 4580
-        activities = 14
-        avg_events_per_trace = 4.66
-        max_trace_length = 15
-        avg_event_duration_seconds = 964224  # seconds
-        max_event_duration_seconds = 5180544  # seconds
+        events = 73988.2
+        traces = 3541.2
+        activities = 203.5
+        avg_events_per_trace = 29.937
+        max_trace_length = 118.3
+        avg_event_duration_seconds = 2.559  # seconds
+        max_event_duration_seconds = 614.999  # seconds
         average = {self.events: events, self.traces: traces, self.activities: activities, self.avg_events_per_trace: avg_events_per_trace,
                    self.max_trace_length: max_trace_length, self.avg_event_duration_seconds: avg_event_duration_seconds, self.max_event_duration_seconds: max_event_duration_seconds}
         return average
@@ -46,16 +46,20 @@ class Decider:
     # value < 0 means not suited for a large integer
     # TODO: read from a csv
     def getMatrix(self):
+        evermann = {self.events: 1, self.traces: 1, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: -2, self.avg_event_duration_seconds: 3, self.max_event_duration_seconds: 2}
         camargo = {self.events: 1, self.traces: 1, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: -2, self.avg_event_duration_seconds: 3, self.max_event_duration_seconds: 2}
         tax =     {self.events: 2, self.traces: 2, self.activities: 2, self.avg_events_per_trace: -1, self.max_trace_length: -1, self.avg_event_duration_seconds: 2, self.max_event_duration_seconds: 1}
         lin =     {self.events: 1, self.traces: 1, self.activities: 3, self.avg_events_per_trace: 1, self.max_trace_length: -1, self.avg_event_duration_seconds: 1, self.max_event_duration_seconds: 3}
         dimauro = {self.events: 3, self.traces: 2, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: 2, self.avg_event_duration_seconds: 2, self.max_event_duration_seconds: 2}
         pauwels = {self.events: -1, self.traces: 1, self.activities: 3, self.avg_events_per_trace: 1, self.max_trace_length: 2, self.avg_event_duration_seconds: 1, self.max_event_duration_seconds: 1}
-        authors = {'Camargo': camargo,
-                   'Tax': tax,
-                   'Lin': lin,
-                   'DiMauro': dimauro,
-                   'Pauwels': pauwels}
+        authors = {
+            'Evermann': evermann,
+            'Camargo': camargo,
+            'Tax': tax,
+            'Lin': lin,
+            'DiMauro': dimauro,
+            'Pauwels': pauwels
+        }
 
         return authors
 
