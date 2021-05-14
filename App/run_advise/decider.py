@@ -14,13 +14,13 @@ class Decider:
     # BENCHMARKS
     # these determine the average values of popular event logs
     def getAverageDict(self):
-        events = 73988.2
-        traces = 3541.2
-        activities = 203.5
-        avg_events_per_trace = 29.937
-        max_trace_length = 118.3
-        avg_event_duration_seconds = 2.559  # seconds
-        max_event_duration_seconds = 614.999  # seconds
+        events = 295831.636
+        traces = 7201.909
+        activities = 188.727
+        avg_events_per_trace = 32.433
+        max_trace_length = 377.818
+        avg_event_duration_seconds = 2.867    # seconds
+        max_event_duration_seconds = 622.833  # seconds
         average = {self.events: events, self.traces: traces, self.activities: activities, self.avg_events_per_trace: avg_events_per_trace,
                    self.max_trace_length: max_trace_length, self.avg_event_duration_seconds: avg_event_duration_seconds, self.max_event_duration_seconds: max_event_duration_seconds}
         return average
