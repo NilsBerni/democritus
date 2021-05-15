@@ -1,3 +1,8 @@
+import csv
+import os
+
+import numpy
+
 
 class Decider:
 
@@ -45,29 +50,31 @@ class Decider:
     # value > 0 means suited for a large integer
     # value < 0 means not suited for a large integer
     # TODO: read from a csv
-    def getMatrix(self):
-        evermann = {self.events: 1, self.traces: 1, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: -2, self.avg_event_duration_seconds: 3, self.max_event_duration_seconds: 2}
-        camargo = {self.events: 1, self.traces: 1, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: -2, self.avg_event_duration_seconds: 3, self.max_event_duration_seconds: 2}
-        tax =     {self.events: 2, self.traces: 2, self.activities: 2, self.avg_events_per_trace: -1, self.max_trace_length: -1, self.avg_event_duration_seconds: 2, self.max_event_duration_seconds: 1}
-        lin =     {self.events: 1, self.traces: 1, self.activities: 3, self.avg_events_per_trace: 1, self.max_trace_length: -1, self.avg_event_duration_seconds: 1, self.max_event_duration_seconds: 3}
-        dimauro = {self.events: 3, self.traces: 2, self.activities: 1, self.avg_events_per_trace: -1, self.max_trace_length: 2, self.avg_event_duration_seconds: 2, self.max_event_duration_seconds: 2}
-        pauwels = {self.events: -1, self.traces: 1, self.activities: 3, self.avg_events_per_trace: 1, self.max_trace_length: 2, self.avg_event_duration_seconds: 1, self.max_event_duration_seconds: 1}
-        authors = {
-            'Evermann': evermann,
-            'Camargo': camargo,
-            'Tax': tax,
-            'Lin': lin,
-            'DiMauro': dimauro,
-            'Pauwels': pauwels
-        }
+    def getMatrix(self, prediction):
+
+        my_path = os.path.abspath(os.path.dirname(__file__))
+        matrix_path = os.path.join(my_path, f"value_matrix_gen/output/{prediction}_matrix.csv")
+        with open(matrix_path, 'r') as file:
+            reader = csv.reader(file, delimiter=';')
+            array2d = list(reader)
+            tArray2d = numpy.transpose(array2d)
+            authors = {}
+            for idx, row in enumerate(tArray2d):
+
+                if idx == 0:
+                    continue
+
+                values = list(row.copy())
+                values.pop(0)
+                authors[row[0]] = {self.events: values[0], self.traces: values[1], self.activities: values[2], self.avg_events_per_trace: values[3], self.max_trace_length: values[4], self.avg_event_duration_seconds: values[5], self.max_event_duration_seconds: values[6]}
 
         return authors
 
-    def decide(self, xesanalyzer):
+    def decide(self, xesanalyzer, prediction):
 
         input_log_dict = self.getDict(xesanalyzer)
         average_dict = self.getAverageDict()
-        matrix = self.getMatrix()
+        matrix = self.getMatrix(prediction)
         author_scoring = {}
 
         for author, dict in matrix.items():
@@ -75,6 +82,7 @@ class Decider:
             score = 0.0
 
             for key, instrument in dict.items():
+                instrument = float(instrument)
 
                 if average_dict[key] is not None and input_log_dict[key] is not None:
                     average_value = average_dict[key]

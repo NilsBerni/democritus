@@ -33,10 +33,12 @@ def advise():
    if request.method == 'POST':
 
       try:
+
+          prediction = request.form.get('tvalue')
           file = request.files['file']
           advisor = Advisor()
           advisor.learn(xes_file=file)
-          result = advisor.think()
+          result = advisor.think(prediction=prediction)
       except:
           result = "unsupported file"
 

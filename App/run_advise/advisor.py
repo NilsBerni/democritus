@@ -18,7 +18,7 @@ class Advisor:
         self.xesAalyzer.analyze(xes_file)
 
     # Think about suggestion
-    def think(self):
+    def think(self, prediction):
 
         events = self.xesAalyzer.get_events()
         traces = self.xesAalyzer.get_traces()
@@ -29,7 +29,7 @@ class Advisor:
         max_event_duration = self.xesAalyzer.get_max_event_duration()
 
         decider = Decider()
-        suggestion = decider.decide(self.xesAalyzer)
+        suggestion = decider.decide(self.xesAalyzer, prediction=prediction)
 
         return render_template('advisor_result.html',
                                events=events,
