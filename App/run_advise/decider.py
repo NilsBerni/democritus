@@ -52,7 +52,6 @@ class Decider:
     # authors are measured by measuring instruments with one integer
     # value > 0 means suited for a large integer
     # value < 0 means not suited for a large integer
-    # TODO: read from a csv
     def getMatrix(self, prediction):
 
         my_path = os.path.abspath(os.path.dirname(__file__))
