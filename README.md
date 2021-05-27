@@ -2,7 +2,7 @@
  
  
  Democritus is remembered for his formulation of an atomic theory, and this stunning quote: “Nothing exists except atoms and space, everything else is opinion.”
- This means that we can never be sure of what we are thinking. Truth is at the level of atoms. Since there is nothing else but atoms and void and their interactions. What we think is 
+ This means that we can never be sure of what we are thinking. Truth is at the level of atoms. Since there is nothing else but void, atoms and their interactions. What we think is 
  a result of these interactions and we only get this result. What we imagine, all of this depends on the interaction of atoms which we cannot get to since they remain in the depths. 
  Democritus therefore was sceptical of our ability to know anything with certainty. Neural networks can help us to understand these interactions and make predictions about future atomic interactions on a higher level. 
  With our imperfect understanding of atomic interactions we can on a higher level use predictive process monitoring to understand and predict probabilistic human process interactions.
