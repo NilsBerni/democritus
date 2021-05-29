@@ -13,7 +13,7 @@ from sklearn.neighbors import KernelDensity
 
 # from CPT_inverted_index import CPT_inverted_index
 from RelatedMethods.EDBN.CPT import CPT
-# from RelatedMethods.EDBN.NNTable import NNT
+# from Methods.EDBN.NNTable import NNT
 import Utils.Result as Result
 
 

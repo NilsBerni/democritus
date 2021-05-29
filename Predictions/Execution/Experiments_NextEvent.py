@@ -26,7 +26,7 @@ from Utils.LogFile import LogFile
 
 
 def test_edbn(dataset_folder, model_folder, k):
-    #from RelatedMethods.EDBN_Prediction import predict_next_event
+    #from Methods.EDBN_Prediction import predict_next_event
     from Predictions.eDBN_Prediction import predict_next_event
 
     model_file = os.path.join(model_folder, "model")
