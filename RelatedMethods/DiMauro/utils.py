@@ -70,7 +70,7 @@ def load_data(train, test, case_index = 0, act_index = 1):
 
     import numpy as np
     import csv
-    from keras.preprocessing.sequence import pad_sequences
+    from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 
     ACT_INDEX = act_index
     CASE_INDEX = case_index
@@ -233,7 +233,7 @@ def load_data(train, test, case_index = 0, act_index = 1):
 def load_cases(train, test, case_index = 0, act_index = 1):
     import numpy as np
     import csv
-    from keras.preprocessing.sequence import pad_sequences
+    from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 
     ACT_INDEX = act_index
     CASE_INDEX = case_index

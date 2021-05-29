@@ -1,16 +1,16 @@
 import pandas as pd
 import numpy as np
-from keras.utils import np_utils
+from tensorflow.python.keras.utils import np_utils
 from sklearn import preprocessing
-from keras.layers import Conv2D, Activation
-from keras import regularizers
+from tensorflow.python.keras.layers import Conv2D, Activation
+from tensorflow.python.keras import regularizers
 from sklearn.metrics import classification_report
-from keras.models import Sequential
-from keras.layers.core import Flatten, Dense
-from keras.layers.convolutional import MaxPooling2D
-from keras.optimizers import Nadam
-from keras.callbacks import EarlyStopping
-from keras.layers.normalization import BatchNormalization
+from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers.core import Flatten, Dense
+from tensorflow.python.keras.layers.convolutional import MaxPooling2D
+from tensorflow.python.keras.optimizers import Nadam
+from tensorflow.python.keras.callbacks import EarlyStopping
+from tensorflow.python.keras.layers.normalization import BatchNormalization
 
 seed = 123
 np.random.seed(seed)

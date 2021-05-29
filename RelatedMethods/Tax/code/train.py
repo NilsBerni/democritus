@@ -17,13 +17,13 @@ import os
 from collections import Counter
 
 import numpy as np
-from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
-from keras.layers import Input
-from keras.layers.core import Dense
-from keras.layers.normalization import BatchNormalization
-from keras.layers.recurrent import LSTM
-from keras.models import Model
-from keras.optimizers import Nadam
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
+from tensorflow.python.keras.layers import Input
+from tensorflow.python.keras.layers.core import Dense
+from tensorflow.python.keras.layers.normalization import BatchNormalization
+from tensorflow.python.keras.layers.recurrent import LSTM
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.optimizers import Nadam
 
 
 def train(train_log, test_log, model_folder):

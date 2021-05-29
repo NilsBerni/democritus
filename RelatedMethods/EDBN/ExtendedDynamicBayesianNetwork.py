@@ -1,5 +1,5 @@
 """
-    Author: Stephen Pauwels
+
 """
 
 import multiprocessing as mp
@@ -12,8 +12,8 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.neighbors import KernelDensity
 
 # from CPT_inverted_index import CPT_inverted_index
-from EDBN.CPT import CPT
-# from EDBN.NNTable import NNT
+from RelatedMethods.EDBN.CPT import CPT
+# from RelatedMethods.EDBN.NNTable import NNT
 import Utils.Result as Result
 
 

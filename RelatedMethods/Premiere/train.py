@@ -6,12 +6,12 @@ set_random_seed(seed)
 
 import keras
 from sklearn.metrics import classification_report
-from keras.layers.core import Dense, Dropout, Flatten
-from keras.layers.convolutional import Conv2D, MaxPooling2D
-from keras.optimizers import Adam
-from keras.layers import Input, concatenate
-from keras.models import Model
-from keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
+from tensorflow.python.keras.layers.core import Dense, Dropout, Flatten
+from tensorflow.python.keras.layers.convolutional import Conv2D, MaxPooling2D
+from tensorflow.python.keras.optimizers import Adam
+from tensorflow.python.keras.layers import Input, concatenate
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
 import pandas as pd
 import utility as ut
 from sklearn import preprocessing

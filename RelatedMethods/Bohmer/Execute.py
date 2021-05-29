@@ -1,5 +1,5 @@
 """
-    Author: Stephen Pauwels
+
 """
 
 from RelatedMethods.Bohmer import LikelihoodGraph as lg

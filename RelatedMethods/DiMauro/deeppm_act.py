@@ -3,7 +3,7 @@
 """
 
 import numpy as np
-from keras.callbacks import ModelCheckpoint
+from tensorflow.python.keras.callbacks import ModelCheckpoint
 
 seed = 123
 np.random.seed(seed)

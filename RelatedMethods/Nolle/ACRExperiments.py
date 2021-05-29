@@ -180,7 +180,7 @@ def fit_and_save(dataset_name, ad, ad_kwargs=None, fit_kwargs=None):
     session.close()
 
     if isinstance(ad, NNAnomalyDetector):
-        from keras.backend import clear_session
+        from tensorflow.python.keras.backend import clear_session
         clear_session()
 
 

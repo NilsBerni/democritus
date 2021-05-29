@@ -11,37 +11,32 @@
 <body>
     <section class="contact-clean">
         <form method="post">
-            <h1 style="text-align: center;">Predict</h1><strong>RP SIM</strong>
-            <div class="form-group"><input type="text" class="form-control" placeholder="0.85" name="rp_sim" /></div><strong>Batch Size</strong>
-            <div class="form-group"><input type="text" class="form-control" name="batch_size" placeholder="Usually 32, 64, 128 or 256" /></div><strong>EPOCHS</strong>
-            <div class="form-group"><input type="text" class="form-control" name="epochs" placeholder="2" /></div><strong>MODEL TYPE</strong>
+            <h1 style="text-align: center;">Predict</h1>
+            <h4 class="text-center" style="text-align: center;height: 99px;">Predict using previously trained event logs</h4>
+            </div><strong>EVENT LOG</strong>
             <div class="form-group"><select class="form-control">
                     <optgroup label="This is a group">
-                        <option value="12" selected>shared_cat</option>
-                        <option value="13">specialized</option>
-                        <option value="14">concatenated</option>
-                        <option value>shared_cat_gru</option>
-                        <option value>specialized_gru</option>
-                        <option value>concatenated_gru</option>
+                        <option value="12" selected>Helpdesk</option>
+                        <option value="13">BPIC12</option>
+                        <option value="14">BPIC12W</option>
                     </optgroup>
-                </select></div><strong>MODEL FILE (.h5)</strong>
-            <div class="form-group"><input type="file" class="form-control-file" /></div><strong>IMPLEMENTATION</strong>
+                </select>
+            </div><strong>IMPLEMENTATION</strong>
             <div class="form-group"><select class="form-control">
                     <optgroup label="This is a group">
                         <option value="12" selected>Camargo</option>
                         <option value="13">Tax</option>
                         <option value="14">Lin</option>
                     </optgroup>
-                </select></div><strong>PREDICTION TYPE</strong>
+                </select>
+            </div><strong>PREDICTION TYPE</strong>
             <div class="form-group"><select class="form-control">
                     <optgroup label="This is a group">
-                        <option value="12" selected>Prefix</option>
+                        <option value="12" selected>Suffix</option>
                         <option value="13">Next Event</option>
                         <option value="14">Remaining Time</option>
-                    </optgroup>
-                </select></div><strong></strong><strong>EVENT LOG UPLOAD</strong>
-            <div class="form-group"><input type="file" class="form-control-file" /></div><strong></strong>
-            <div class="form-group"><small class="form-text text-danger"></small></div>
+                    </optgroup>RP SIM EVENT LOG
+                </select></div><strong></strong>
             <div class="form-group"><button class="btn btn-primary" type="submit">RUN </button></div>
         </form>
     </section>

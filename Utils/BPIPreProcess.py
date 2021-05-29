@@ -1,5 +1,5 @@
 """
-    Author: Stephen Pauwels
+
 """
 
 

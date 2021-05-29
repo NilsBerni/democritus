@@ -1,10 +1,10 @@
-from EDBN.ConditionalTable import ConditionalTable
+from RelatedMethods.EDBN.ConditionalTable import ConditionalTable
 
-from keras.layers import Input, Embedding, Concatenate, Dense, Softmax, Flatten, Dropout, BatchNormalization
-from keras.models import Model
-from keras.optimizers import Nadam
+from tensorflow.python.keras.layers import Input, Embedding, Concatenate, Dense, Softmax, Flatten, Dropout, BatchNormalization
+from tensorflow.python.keras.models import Model
+from tensorflow.python.keras.optimizers import Nadam
 import keras.utils as ku
-from keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint
 
 import numpy as np
 

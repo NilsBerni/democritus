@@ -1,4 +1,4 @@
-from EDBN.ConditionalTable import ConditionalTable
+from RelatedMethods.EDBN.ConditionalTable import ConditionalTable
 
 class CPT(ConditionalTable):
 

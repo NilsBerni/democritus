@@ -306,6 +306,6 @@ if __name__ == "__main__":
 
     model = train(train_log, epochs=100, early_stop=10)
     # model.save("tmp.h5")
-    # from keras.models import load_model
+    # from tensorflow.python.keras.models import load_model
     # test(test_log, load_model("tmp.h5"))
     test(test_log, model)
