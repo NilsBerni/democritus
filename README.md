@@ -10,6 +10,12 @@
  
  All experiments in the paper can be reproduced using the files in the App directory in the project.
 
+## Functionalities
+
+ This framework is currently able to predict:
+ - Next event (activity)
+ - Suffix
+
 ## Project Structure
 - [App](https://github.com/NilsBerni/edbn/tree/master/Anomalies): Contains all wrappers used to run the application.
 - [Utils](https://github.com/NilsBerni/edbn/tree/master/Utils): Some extra implementations regarding datastructures, preprocessing and data generation
