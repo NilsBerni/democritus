@@ -1,0 +1,21 @@
+\begin{table}[]
+\centering
+\begin{tabular}{l|l||l|l|l|l}
+& Dataset     &  Lin   &  Tax   & Pauwels& Cam. Sh & Cam. Sh      \\ \hline \hline
+\multirow{11}{*}{\rotatebox{90}{Training time}}              
+\\ 
+& weekend     & 0.422  & 0.501  & 0.216  & 0.123  \\ 
+& bpic15_1    & 0.243  & 0.356  & 0.248  & 0.180  \\ 
+& bpic12      & 0.198  & 0.412  & 0.150  & 0.234  \\ 
+& bpic15_4    & 0.374  & 0.353  & 0.235  & 0.224  \\ 
+& bpic15_3    & 0.395  & 0.344  & 0.279  & 0.135  \\ 
+& labour      & 0.525  & 0.417  & 0.176  & 0.157  \\ 
+& bpic15_2    & 0.455  & 0.365  & 0.335  & 0.146  \\ 
+& bpic15_5    & 0.347  & 0.440  & 0.268  & 0.241  \\ 
+& bpic12w     & 0.136  & 0.108  & 0.296  & 0.121  \\ 
+& helpdesk    & 0.447  & 0.630  & 0.278  & 0.235  
+\hline \hline
+                                                             \end{tabular}
+\caption{\label{tab:robots} The prediction accuracy for Pauwels implementation is measured using the next event optimized training and the k-value is set to 3..}
+\label{table:compareT}
+\end{table}

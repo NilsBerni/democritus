@@ -12,8 +12,7 @@ import random
 import jellyfish as jf
 import numpy as np
 import pandas as pd
-from tensorflow.python.keras.models import load_model
-from support_modules import support as sup
+from tensorflow.python.keras.models import load_modelfrom RelatedMethods.Camargo.support_modules import support as sup
 
 START_TIMEFORMAT = ''
 INDEX_AC = None

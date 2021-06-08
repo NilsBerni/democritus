@@ -1,0 +1,21 @@
+\begin{table}[]
+\centering
+\begin{tabular}{l|l||l|l|l|l|l}
+& Dataset     & DiMauro&  Lin   &  Tax   & Pauwels& Cam. Sp & Cam. Sh      \\ \hline \hline
+\multirow{11}{*}{\rotatebox{90}{Training time}}              
+\\ 
+& weekend     &  8     &  20    &  9     &  8     &  17    &  16    \\ 
+& bpic15_1    &  13    &  735   &  789   &  16    &  694   &  156   \\ 
+& bpic12      &  28    &  2260  &  2555  &  64    &  2253  &  2302  \\ 
+& bpic15_4    &  12    &  622   &  737   &  12    &  621   &  642   \\ 
+& bpic15_3    &  14    &  797   &  938   &  19    &  789   &  791   \\ 
+& labour      &  8     &  31    &  31    &  8     &  28    &  28    \\ 
+& bpic15_2    &  12    &  615   &  716   &  15    &  611   &  595   \\ 
+& bpic15_5    &  13    &  795   &  1023  &  19    &  766   &  801   \\ 
+& bpic12w     &  18    &  1558  &  853   &  21    &  819   &  838   \\ 
+& helpdesk    &  16    &  285   &  211   &  13    &  285   &  305   
+\hline \hline
+                                                             \end{tabular}
+\caption{\label{tab:robots} The prediction accuracy for Pauwels implementation is measured using the next event optimized training and the k-value is set to 3..}
+\label{table:compareT}
+\end{table}

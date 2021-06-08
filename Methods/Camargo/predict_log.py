@@ -13,8 +13,8 @@ from datetime import timedelta
 import numpy as np
 import pandas as pd
 from tensorflow.python.keras.models import load_model
-from support_modules import support as sup
-from support_modules.analyzers import generalization as gen
+from RelatedMethods.Camargo.support_modules import support as sup
+from RelatedMethods.Camargo.support_modules.analyzers import generalization as gen
 
 START_TIMEFORMAT = ''
 INDEX_AC = None

@@ -1,0 +1,21 @@
+\begin{table}[]
+\centering
+\begin{tabular}{l|l||l|l|l|l|l}
+& Dataset     & DiMauro&  Lin   &  Tax   & Pauwels& Cam. Sp & Cam. Sh      \\ \hline \hline
+\multirow{11}{*}{\rotatebox{90}{Training time}}              
+\\ 
+& weekend     &  35    &  90    &  127   &  76    &  146   &  77    \\ 
+& bpic15_1    &  483   &  1852  &  7282  &  142   &  6751  &  2307  \\ 
+& bpic12      &  1042  &  5837  &  52141 &  185   &  20726 &  6880  \\ 
+& bpic15_4    &  397   &  4694  &  9420  &  161   &  5845  &  2024  \\ 
+& bpic15_3    &  459   &  1381  &  9996  &  141   &  7383  &  2539  \\ 
+& labour      &  38    &  145   &  994   &  74    &  261   &  179   \\ 
+& bpic15_2    &  359   &  8698  &  7980  &  135   &  5345  &  1900  \\ 
+& bpic15_5    &  603   &  1146  &  13460 &  13460 &  7063  &  13460 \\ 
+& bpic12w     &  988   &  3211  &  5356  &  109   &  7353  &  2608  \\ 
+& helpdesk    &  182   &  1259  &  2120  &  125   &  3659  &  1026  
+\hline \hline
+                                                             \end{tabular}
+\caption{\label{tab:robots} All time related values are given in seconds. The training times for Pauwels implementation are measured using the next event optimized training and the k-value is set to 3.}
+\label{table:compareT}
+\end{table}

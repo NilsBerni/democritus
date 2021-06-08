@@ -8,11 +8,16 @@ import os
 
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from tensorflow.python.keras.layers import Input, Embedding
-from tensorflow.python.keras.layers.core import Dense
+#from tensorflow.keras.layers.core import Dense
+from tensorflow.python.keras.layers import Dense
 from tensorflow.python.keras.layers.normalization import BatchNormalization
 from tensorflow.python.keras.layers.recurrent import LSTM
 from tensorflow.python.keras.models import Model
-from tensorflow.python.keras.optimizers import Nadam, Adam, SGD, Adagrad
+#from tensorflow.python.keras.optimizer_v1 import Nadam, Adam, SGD, Adagrad
+from tensorflow.python.keras.optimizer_v1 import SGD
+from tensorflow.python.keras.optimizer_v2.adagrad import Adagrad
+from tensorflow.python.keras.optimizer_v2.adam import Adam
+from tensorflow.python.keras.optimizer_v2.nadam import Nadam
 
 
 def training_model(vec, ac_weights, rl_weights, output_folder, args, epochs, early_stop):

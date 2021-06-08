@@ -89,7 +89,7 @@ class XESAnalyzer:
 
                                 last_event_timestamp = timestamp
 
-                            if value.attrib['key'] == 'Activity':
+                            if value.attrib['key'] == 'concept:name':
                                 activity_name = value.attrib['value']
 
                                 if activity_name in activities:

@@ -17,13 +17,14 @@ import os
 from collections import Counter
 
 import numpy as np
+from tensorflow.python.keras import Model
 from tensorflow.python.keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from tensorflow.python.keras.layers import Input
 from tensorflow.python.keras.layers.core import Dense
 from tensorflow.python.keras.layers.normalization import BatchNormalization
 from tensorflow.python.keras.layers.recurrent import LSTM
-from tensorflow.python.keras.models import Model
-from tensorflow.python.keras.optimizers import Nadam
+#from tensorflow.python.keras.optimizers import Nadam
+from tensorflow.python.keras.optimizer_v2.nadam import Nadam
 
 
 def train(train_log, test_log, model_folder):
@@ -180,11 +181,11 @@ def train(train_log, test_log, model_folder):
 
     model = Model(inputs=[main_input], outputs=[act_output])
 
-    opt = Nadam(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=1e-08, schedule_decay=0.004, clipvalue=3)
+    opt = Nadam(learning_rate=0.002, beta_1=0.9, beta_2=0.999, epsilon=1e-08, schedule_decay=0.004, clipvalue=3)
 
     model.compile(loss={'act_output':'categorical_crossentropy'}, optimizer=opt)
     early_stopping = EarlyStopping(monitor='val_loss', patience=42)
     model_checkpoint = ModelCheckpoint(os.path.join(model_folder, 'model_{epoch:03d}-{val_loss:.2f}.h5'), monitor='val_loss', verbose=0, save_best_only=True, save_weights_only=False, mode='auto')
     lr_reducer = ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, verbose=0, mode='auto', min_delta=0.0001, cooldown=0, min_lr=0)
 
-    model.fit(X, {'act_output':y_a}, validation_split=0.2, verbose=2, callbacks=[early_stopping, model_checkpoint, lr_reducer], batch_size=maxlen, epochs=500)
+    model.fit(X, {'act_output':y_a}, validation_split=0.2, verbose=2, callbacks=[early_stopping, model_checkpoint, lr_reducer], batch_size=maxlen, epochs=200)

@@ -89,6 +89,10 @@ def train_embedded(log_df, ac_index, rl_index, dim_number):
     model.summary()
 
     n_positive = 1024
+
+    if n_positive > len(pairs):
+        n_positive = int(len(pairs) / 2)
+
     gen = generate_batch(pairs, n_positive, negative_ratio=2)
     # Train
     model.fit_generator(gen, epochs=100,
@@ -117,6 +121,7 @@ def generate_batch(pairs, n_positive=50, negative_ratio=1.0):
     while True:
         # randomly choose positive examples
         idx = 0
+
         for idx, (activity, role) in enumerate(random.sample(pairs, n_positive)):
             batch[idx, :] = (activity, role, 1)
         # Increment idx by 1

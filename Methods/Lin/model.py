@@ -1,7 +1,7 @@
 """
     Implementation of MM-Pred: A Deep Predictive Model for Multi-attribute Event Sequence [Lin, Wen and Wang]
 
-
+    Author: Stephen Pauwels
 """
 
 import multiprocessing as mp
