@@ -1,7 +1,0 @@
-Events;BPIC18;Helpdesk
-Traces;BPIC18;BPIC15_2
-Activities;BPIC15_2;BPIC12W
-Avg activities per case;BPIC18;Helpdesk
-Max trace length;BPIC18;Helpdesk
-Avg duration;Helpdesk;BPIC12
-Max duration;BPIC15_3;Helpdesk

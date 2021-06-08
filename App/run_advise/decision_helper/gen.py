@@ -8,7 +8,6 @@ my_path = os.path.abspath(os.path.dirname(__file__))
 strongest_weakest_path = os.path.join(my_path, "data/strongest_weakest.csv")
 suffix_pred_path = os.path.join(my_path, "data/suffix_pred.csv")
 event_pred_path = os.path.join(my_path, "data/event_pred.csv")
-duration_pred_path = os.path.join(my_path, "data/duration_pred.csv")
 output_path = os.path.join(my_path, "data/value_matrix.csv")
 
 def createValMatrix(path, output_name, imp_strong_dict):
@@ -56,3 +55,14 @@ def createValMatrix(path, output_name, imp_strong_dict):
     with open(f'output/{output_name}.csv', 'w', newline='') as output:
         csvWriter = csv.writer(output, delimiter=';')
         csvWriter.writerows(outputCsv)
+
+
+
+with open(strongest_weakest_path) as file:
+
+    s_w_dict = {}
+    reader = csv.reader(file, delimiter=';')
+    for row in reader:
+        s_w_dict[row[0]] = row[1]
+
+    createValMatrix(event_pred_path, "event_matrix", s_w_dict)

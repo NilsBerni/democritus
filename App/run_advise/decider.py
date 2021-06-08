@@ -68,11 +68,41 @@ class Decider:
 
                 values = list(row.copy())
                 values.pop(0)
-                authors[row[0]] = {self.events: values[0], self.traces: values[1], self.activities: values[2], self.avg_events_per_trace: values[3], self.max_trace_length: values[4], self.avg_event_duration_seconds: values[5], self.max_event_duration_seconds: values[6]}
+                authors[row[0]] = {self.events: values[0], self.traces: values[1], self.activities: values[2], self.avg_events_per_trace: values[3], self.max_trace_length: values[4]}
 
         return authors
 
+    def find_strongest(self, datafile_path, name):
+        with open(datafile_path) as csv_file:
+            reader = csv.reader(csv_file, delimiter=';')
+            headers = next(reader, None)
+            for row in reader:
+                if row[0].capitalize() == name.capitalize():
+                    list = row.copy()
+                    list.pop(0)
+                    max_value = max(list)
+                    max_index = list.index(max_value)
+                    suggestion = headers[max_index + 1]
+
+        return suggestion
+
     def decide(self, xesanalyzer, prediction):
+
+        my_path = os.path.abspath(os.path.dirname(__file__))
+        suffix_pred_path = os.path.join(my_path, "decision_helper/data/suffix_pred.csv")
+        event_pred_path = os.path.join(my_path, "decision_helper/data/event_pred.csv")
+
+        if prediction == "next":
+            suggestion = self.find_strongest(event_pred_path, xesanalyzer.name)
+
+
+        if prediction == "suffix":
+            suggestion = self.find_strongest(suffix_pred_path, xesanalyzer.name)
+
+        return suggestion.upper()
+
+
+    def decide_strong_weak(self, xesanalyzer, prediction):
 
         input_log_dict = self.getDict(xesanalyzer)
         average_dict = self.getAverageDict()
@@ -94,7 +124,6 @@ class Decider:
                     score += ratio * instrument
 
             author_scoring[author] = score
-
 
         max_score = 0
         suggested_author = ''

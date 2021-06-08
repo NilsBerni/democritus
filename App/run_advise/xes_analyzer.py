@@ -1,3 +1,4 @@
+import os
 import xml.etree.ElementTree as ET
 from datetime import datetime
 import pandas as pd
@@ -14,6 +15,7 @@ class XESAnalyzer:
     avg_avg_event_duration_seconds = 2.867  # seconds
     avg_max_event_duration_seconds = 622.833  # seconds
 
+    name = None
     events = None
     traces = None
     activities = None
@@ -48,6 +50,7 @@ class XESAnalyzer:
     # Analyze xes file
     def analyze(self, xes_file):
 
+        self.name = xes_file.filename.split('.')[0]
         tree = ET.parse(xes_file)
         root = tree.getroot()
 

@@ -3,17 +3,17 @@
 \begin{tabular}{l|l||l|l|l|l|l}
 & Dataset     &  Lin   &  Tax   & Pauwels& Cam. Sp & Cam. Sh      \\ \hline \hline
 \multirow{11}{*}{\rotatebox{90}{Training time}}              
-\\ 
-& weekend     &  331   &  491   &  34    &  156   \\ 
-& bpic15_1    &  1165  &  20747 &  53    &  20478 \\ 
-& bpic12      &  11321 &  43358 &  732   &  8392  \\ 
-& bpic15_4    &  9231  &  13992 &  102   &  3420  \\ 
-& bpic15_3    &  9532  &  37466 &  158   &  14574 \\ 
-& labour      &  326   &  498   &  42    &  259   \\ 
-& bpic15_2    &  11932 &  58586 &  129   &  2349  \\ 
-& bpic15_5    &  14563 &  31880 &  96    &  15436 \\ 
-& bpic12w     &  4642  &  36733 &  326   &  3451  \\ 
-& helpdesk    &  254   &  743   &  55    &  202   
+\\
+& bpic12      &  11321 &  43358 &  732   &  8392  \\
+& bpic12w     &  4642  &  36733 &  326   &  3451  \\
+& bpic15_1    &  1165  &  20747 &  53    &  20478 \\
+& bpic15_2    &  11932 &  58586 &  129   &  2349  \\
+& bpic15_3    &  9532  &  37466 &  158   &  14574 \\
+& bpic15_4    &  9231  &  13992 &  102   &  3420  \\
+& bpic15_5    &  14563 &  31880 &  96    &  15436 \\
+& helpdesk    &  254   &  743   &  55    &  202   \\
+& labour      &  326   &  498   &  42    &  259   \\
+& weekend     &  331   &  491   &  34    &  156   \\
 \hline \hline
                                                              \end{tabular}
 \caption{\label{tab:robots} The prediction accuracy for Pauwels implementation is measured using the next event optimized training and the k-value is set to 3..}
