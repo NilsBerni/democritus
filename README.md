@@ -32,12 +32,23 @@ This framework is currently able to predict:
 The user interface is more of a concept than that. We can already use it productively in its current state. However, the user interface is not a mockup; if enough tested on different devices, we can use it to use productivity software. The interface is currently using models and training results in the cache to demonstrate its functionality. 
 
 ### Applying the Framework
+There are vital functions that we can apply to perform all the different implementations. There are vital functions that we can apply to perform all the different implementations. All the functions use similar arguments: 
+
+- *Arg0* (Implementation): ["TAX
+", "DIMAURO", "EDBN", "LIN", "TAX"]
+- *Arg1* (Event Log): i. e. ''HELPDESK"
+- *Arg2* (Optional model specific Parameter): i. e. "shared_cat"
+
+We can specify additional Parameters, i. e. batch size and epochs in the files in the execution folder.
 
 #### Training
+- run_training(argv) 
 
 #### Suffix Prediction
+- run_nextevent_pred(argv) 
 
 #### Next Activity Prediction
+- run_suffix_pred(argv) 
 
 
 ### !!!WARNING!!!
