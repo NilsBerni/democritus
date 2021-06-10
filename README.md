@@ -35,6 +35,9 @@ However, from experience, the script will run at least one week on a personal co
 - [App](https://github.com/NilsBerni/democritus/tree/master/app): Contains all wrappers used to run the application.
 - [Utils](https://github.com/NilsBerni/democritus/tree/master/Utils): Some extra implementations regarding datastructures, preprocessing and data generation
 - [Data](https://github.com/NilsBerni/democritus/tree/master/Data): Data used for the experiments 
+- [Predictions](https://github.com/NilsBerni/democritus/tree/master/Predictions): Prediction files
+    - [Output](https://github.com/NilsBerni/democritus/tree/master/Predictions/Execution/Output): Models and training/prediction logs
+    - [Experiments](https://github.com/NilsBerni/democritus/tree/master/Predictions/Execution/Experiments.py): Script to perform all experiments
 - [Methods](https://github.com/NilsBerni/democritus/tree/master/Methods): Implementations of the other methods used to run the comparison experiments with
     - [Camargo](https://github.com/NilsBerni/democritus/tree/master/Methods/Camargo): Contains the slightly adapted implementation used in [1]
     - [DiMauro](https://github.com/NilsBerni/democritus/tree/master/Methods/DiMauro): Implementation used in [2]
