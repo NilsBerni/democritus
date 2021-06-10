@@ -20,7 +20,7 @@ This framework is currently able to predict:
 
 
 ![Advisor](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
-![Predict](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
+![Predict](https://media.giphy.com/media/jjFV7da0gMkqaDPoMF/giphy.gif)
 
 
  
