@@ -9,7 +9,7 @@
                 * second extra argument: use "next" when training optimized for next event, use "suffix" for suffix
         - CAMARGO: specify architecture to use: shared_cat or specialized
 
-    Author: Stephen Pauwels
+
 """
 
 import os

@@ -20,6 +20,9 @@ BPIC12 = "BPIC12"
 BPIC12W = "BPIC12W"
 HELPDESK = "HELPDESK"
 BPIC18 = "BPIC18"
+NASA = "NASA"
+LABOUR = "LABOUR"
+WEEKEND = "WEEKEND"
 
 DATA_PATH = "../../Data/"
 LOGFILE_PATH = "../../Data/PredictionData/"
@@ -160,7 +163,30 @@ def get_data(dataset, dataset_size, k, add_end, reduce_tasks, resource_pools, re
             logfile = LogFile(DATA_PATH + "BPIC18.csv", ",", 0, dataset_size, None, "case", activity_attr="event", convert=False, k=k)
             colTitles = ["case", "event", "subprocess"]
             logfile.keep_attributes(colTitles)
+        elif dataset == NASA:
+            logfile = LogFile(DATA_PATH + "nasa.csv", ",", 0, dataset_size, None, "case", activity_attr="event",
+                              convert=False, k=k)
+            colTitles = ["case", "event", "role"]
+            logfile.keep_attributes(colTitles)
+            logfile.filter_case_length(5)
+        elif dataset == LABOUR:
+            logfile = LogFile(DATA_PATH + "labour.csv", ",", 0, dataset_size, None, "case", activity_attr="event",
+                              convert=False, k=k)
+            colTitles = ["case", "event", "role"]
+            logfile.keep_attributes(colTitles)
+            logfile.filter_case_length(5)
+        elif dataset == WEEKEND:
+            logfile = LogFile(DATA_PATH + "weekend.csv", ",", 0, dataset_size, None, "case", activity_attr="event",
+                              convert=False, k=k)
+            colTitles = ["case", "event", "role"]
+            logfile.keep_attributes(colTitles)
+            logfile.filter_case_length(5)
         else:
+            logfile = LogFile(DATA_PATH + f"{dataset}.csv", ",", 0, dataset_size, None, "case",
+                              activity_attr="event",
+                              convert=False, k=k)
+            colTitles = ["case", "event", "subprocess"]
+            logfile.keep_attributes(colTitles)
             print("Unknown Dataset")
             return None
 

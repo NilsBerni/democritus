@@ -6,7 +6,6 @@ from Predictions.Execution.Experiments_Train import run_training
 from Predictions.Execution.Experiments_Variables import CAMARGO, DIMAURO, EDBN, LIN, TAX
 from Predictions.DataProcessing import BPIC12, BPIC12W, BPIC15_1, BPIC15_2, BPIC15_3, BPIC15_4, BPIC15_5, HELPDESK, WEEKEND, LABOUR
 
-
 def main(argv):
 
     #CONSIDERED_EVENTLOGS = [WEEKEND, LABOUR, BPIC15_1, BPIC15_2, BPIC15_3, BPIC15_4, BPIC15_5, HELPDESK, BPIC12, BPIC12W]
