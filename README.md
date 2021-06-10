@@ -18,6 +18,7 @@ This framework is currently able to predict:
  - Suffix
 
 ![](Advise.gif)
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
  
 ## !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
