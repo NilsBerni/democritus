@@ -17,6 +17,7 @@ from flask import Flask, render_template, jsonify, request, current_app, send_fr
 from App.run_advise.advisor import Advisor
 
 app = Flask(__name__)
+app.config["SECRET_KEY"] = 'SuperSecretKey123'
 UPLOAD_FOLDER = 'static'
 import zipfile
 from flask import send_file
@@ -44,9 +45,15 @@ def advise():
 
           prediction = request.form.get('tvalue')
           file = request.files['file']
+          filename = file.filename.split(".")[0]
           advisor = Advisor()
           advisor.learn(xes_file=file)
-          result = advisor.think(prediction=prediction)
+          suggestion = advisor.think(prediction=prediction)
+
+          app.config['METHOD'] = suggestion
+          app.config['DATA'] = filename
+
+          result = advisor.render(suggestion)
       except:
           result = "unsupported file"
 
@@ -87,6 +94,16 @@ def predict_result():
 def download():
     data = app.config['DATA']
     method = app.config['METHOD']
+
+    # Mostly the following two conditions will never be executed and they should not.
+    # In rare cases the session data gets lost, however.
+    # These conditions are a temp fix to prevent the app from crashing.
+    # Todo: Fix session data loss and remove these lines
+    if data is None:
+        data = "Helpdesk"
+
+    if method is None:
+        method = "TAX"
 
     filename = f"predictions/execution/output/{data}/models/{method}/"
 

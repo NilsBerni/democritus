@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, app
 
 from App.run_advise.decider import Decider
 from App.run_advise.xes_analyzer import XESAnalyzer
@@ -17,8 +17,8 @@ class Advisor:
         self.xesAalyzer = XESAnalyzer()
         self.xesAalyzer.analyze(xes_file)
 
-    # Think about suggestion
-    def think(self, prediction):
+    # Render html
+    def render(self, suggestion):
 
         events = self.xesAalyzer.get_events()
         traces = self.xesAalyzer.get_traces()
@@ -27,9 +27,6 @@ class Advisor:
         max_trace_length = self.xesAalyzer.get_max_trace_length()
         avg_event_duration = self.xesAalyzer.get_avg_event_duration()
         max_event_duration = self.xesAalyzer.get_max_event_duration()
-
-        decider = Decider()
-        suggestion = decider.decide(self.xesAalyzer, prediction=prediction)
 
         return render_template('advisor_result.html',
                                events=events,
@@ -40,3 +37,12 @@ class Advisor:
                                avg_event_duration=avg_event_duration,
                                max_event_duration=max_event_duration,
                                suggestion=suggestion)
+
+    # Think about suggestion
+    def think(self, prediction):
+
+
+        decider = Decider()
+        suggestion = decider.decide(self.xesAalyzer, prediction=prediction)
+
+        return suggestion
