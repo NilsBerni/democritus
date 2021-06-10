@@ -5,7 +5,6 @@ This means that we can never be sure of what we are thinking. Truth is at the le
 Democritus, therefore, was skeptical of our ability to know anything with certainty. Neural networks can help us to understand these interactions and make predictions about future atomic interactions on a higher level. 
 With our imperfect understanding of atomic interactions, we can use predictive process monitoring to understand and predict probabilistic human process interactions on a higher level.
 
-All experiments in the paper can be reproduced using the files in the App directory in the project.
 
 ## Functionalities
 
