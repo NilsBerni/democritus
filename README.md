@@ -28,6 +28,9 @@ This framework is currently able to predict:
 ### Downloads for Testing and Performing Experiments
 - [Raw Datasets](https://github.com/NilsBerni/RealLifeEventLogs): Contains all raw data we used and tested.
 
+### Install requirenments
+pip install -r requirements.txt
+
 ### Applying the User Interface
 The user interface is more of a concept than that. We can already use it productively in its current state. However, the user interface is not a mockup; if enough tested on different devices, we can use it to use productivity software. The interface is currently using models and training results in the cache to demonstrate its functionality. 
 
