@@ -1,9 +1,9 @@
 import itertools
 import math
 
-import RelatedMethods.Camargo.embedding_training as em
-import RelatedMethods.Camargo.model_training as mo
-import RelatedMethods.Camargo.predict_next as pn
+import Methods.Camargo.embedding_training as em
+import Methods.Camargo.model_training as mo
+import Methods.Camargo.predict_next as pn
 from Utils.LogFile import LogFile
 
 

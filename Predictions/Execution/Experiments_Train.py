@@ -9,7 +9,7 @@
                 * second extra argument: use "next" when training optimized for next event, use "suffix" for suffix
         - CAMARGO: specify architecture to use: shared_cat or specialized
 
-
+    Author: Stephen Pauwels
 """
 
 import os
@@ -19,7 +19,7 @@ import time
 
 from Predictions.DataProcessing import get_data
 
-from RelatedMethods.Camargo.support_modules.support import create_csv_file_header
+from Methods.Camargo.support_modules.support import create_csv_file_header
 from Predictions.Execution.Experiments_Variables import DATA_DESC, DATA_FOLDER, OUTPUT_FOLDER
 from Predictions.Execution.Experiments_Variables import EDBN, CAMARGO, DIMAURO, LIN, TAX
 from Predictions.Execution.Experiments_Variables import K_EDBN, DIMAURO_PARAMS
@@ -28,7 +28,7 @@ from Utils.LogFile import LogFile
 
 
 def train_edbn(data_folder, model_folder, k = None, next_event = True):
-    from RelatedMethods.EDBN.Execute import train
+    from EDBN.Execute import train
     from Predictions.eDBN_Prediction import learn_duplicated_events, predict_next_event, predict_suffix
 
     if k is None:
@@ -85,8 +85,8 @@ def train_edbn(data_folder, model_folder, k = None, next_event = True):
 
 
 def train_camargo(data_folder, model_folder, architecture):
-    import RelatedMethods.Camargo.embedding_training as em
-    import RelatedMethods.Camargo.model_training as mo
+    import Methods.Camargo.embedding_training as em
+    import Methods.Camargo.model_training as mo
 
     logfile = LogFile(data_folder + "full_log.csv", ",", 0, None, None, "case",
                         activity_attr="event", convert=True, k=5)
@@ -100,7 +100,7 @@ def train_camargo(data_folder, model_folder, architecture):
     args = {}
     args["file_name"] = "data"
     args["model_type"] = architecture # Choose from 'joint', 'shared', 'concatenated', 'specialized', 'shared_cat'
-    args["norm_method"] = "lognorm" # Choose from 'lognorm' or 'max'
+    args["norm_method"] = "max" # Choose from 'lognorm' or 'max'
     args["n_size"] = 5 # n-gram size
     args['lstm_act'] = None # optimization function see keras doc
     args['l_size'] = 100 # LSTM layer sizes
@@ -109,13 +109,13 @@ def train_camargo(data_folder, model_folder, architecture):
     args['optim'] = 'Nadam' # optimization function see keras doc
 
     event_emb, role_emb = em.training_model(logfile, model_folder)
-    model = mo.training_model(train_log, event_emb, role_emb, args, 200, 10)
+    model = mo.training_model(train_log, event_emb, role_emb, args, 200, 42)
     model.save(os.path.join(model_folder, "model.h5"))
 
 
 
 def train_lin(data_folder, model_folder):
-    from RelatedMethods.Lin.model import create_model
+    from Methods.Lin.model import create_model
 
     logfile = LogFile(data_folder + "full_log.csv", ",", 0, None, None, "case",
                         activity_attr="event", convert=False, k=5)
@@ -131,7 +131,7 @@ def train_lin(data_folder, model_folder):
 
 
 def train_dimauro(data_folder, model_folder, params = None):
-    from RelatedMethods.DiMauro.deeppm_act import train
+    from Methods.DiMauro.deeppm_act import train
     logfile = LogFile(data_folder + "full_log.csv", ",", 0, None, None, "case",
                         activity_attr="event", convert=False, k=5)
     logfile.add_end_events()
@@ -148,15 +148,17 @@ def train_dimauro(data_folder, model_folder, params = None):
 
 
 def train_tax(data_folder, model_folder):
-    from RelatedMethods.Tax.code.train import train
+    from Methods.Tax.code.train import train
 
     train_log = os.path.join(data_folder, "train_log.csv")
     test_log = os.path.join(data_folder, "test_log.csv")
 
     train(train_log, test_log, model_folder)
 
-
 def main(argv):
+    run_training(argv)
+
+def run_training(argv):
     if len(argv) < 2:
         print("Missing arguments, expected: METHOD and DATA")
         return

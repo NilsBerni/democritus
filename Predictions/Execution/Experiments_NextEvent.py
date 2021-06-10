@@ -9,7 +9,7 @@
                 * second extra argument: use "next" when training optimized for next event, use "suffix" for suffix
         - CAMARGO: specify architecture to use: chared_cat or specialized
 
-
+    Author: Stephen Pauwels
 """
 
 import os
@@ -26,7 +26,7 @@ from Utils.LogFile import LogFile
 
 
 def test_edbn(dataset_folder, model_folder, k):
-    #from Methods.EDBN_Prediction import predict_next_event
+    #from eDBN_Prediction import predict_next_event
     from Predictions.eDBN_Prediction import predict_next_event
 
     model_file = os.path.join(model_folder, "model")
@@ -54,7 +54,7 @@ def test_edbn(dataset_folder, model_folder, k):
 
 
 def test_camargo(dataset_folder, model_folder, architecture):
-    from RelatedMethods.Camargo.predict_next import predict_next
+    from Methods.Camargo.predict_next import predict_next
 
     model_file = sorted([model_file for model_file in os.listdir(model_folder) if model_file.endswith(".h5")])[-1]
     model = load_model(os.path.join(model_folder, model_file))
@@ -72,7 +72,7 @@ def test_camargo(dataset_folder, model_folder, architecture):
 
 
 def test_lin(dataset_folder, model_folder):
-    from RelatedMethods.Lin.model import predict_next, Modulator
+    from Methods.Lin.model import predict_next, Modulator
 
     logfile = LogFile(dataset_folder + "full_log.csv", ",", 0, None, None, "case",
                         activity_attr="event", convert=True, k=5)
@@ -90,7 +90,7 @@ def test_lin(dataset_folder, model_folder):
 
 
 def test_dimauro(dataset_folder, model_folder):
-    from RelatedMethods.DiMauro.deeppm_act import evaluate
+    from Methods.DiMauro.deeppm_act import evaluate
 
     model_file = sorted([model_file for model_file in os.listdir(model_folder) if model_file.endswith(".h5")])[-1]
 
@@ -106,8 +106,8 @@ def test_dimauro(dataset_folder, model_folder):
         fout.write("Accuracy: (%s) %s\n" % (time.strftime("%d-%m-%y %H:%M:%S", time.localtime()), acc))
 
 def test_tax(dataset_folder, model_folder):
-    from RelatedMethods.Tax.code.evaluate_next_activity_and_time import evaluate
-    from RelatedMethods.Tax.code.calculate_accuracy_on_next_event import calc_accuracy
+    from Methods.Tax.code.evaluate_next_activity_and_time import evaluate
+    from Methods.Tax.code.calculate_accuracy_on_next_event import calc_accuracy
 
     train_log = os.path.join(dataset_folder, "train_log.csv")
     test_log = os.path.join(dataset_folder, "test_log.csv")
@@ -118,7 +118,11 @@ def test_tax(dataset_folder, model_folder):
     with open(os.path.join(model_folder, "results_next_event.log"), "a") as fout:
         fout.write("Accuracy: (%s) %s\n" % (time.strftime("%d-%m-%y %H:%M:%S", time.localtime()), acc))
 
+
 def main(argv):
+    run_nextevent_pred(argv)
+
+def run_nextevent_pred(argv):
     if len(argv) < 2:
         print("Missing arguments, expected: METHOD and DATA")
         return

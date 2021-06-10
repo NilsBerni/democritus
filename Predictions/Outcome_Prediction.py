@@ -3,8 +3,8 @@ from Utils.LogFile import LogFile
 
 
 def run_edbn():
-    from RelatedMethods.EDBN_Prediction import get_probabilities
-    from RelatedMethods.EDBN_adapter import train, test
+    from Methods.EDBN_Prediction import get_probabilities
+    from Methods.EDBN_adapter import train, test
 
     labeled_logfile = "../Data/Outcome_Prediction/BPIC15_1_f2.csv"
 

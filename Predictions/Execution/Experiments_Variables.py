@@ -1,5 +1,5 @@
 """
-
+    Author: Stephen Pauwels
 """
 EDBN = "EDBN"
 CAMARGO = "CAMARGO"
@@ -17,6 +17,9 @@ DATA_DESC.append({"folder": "bpic15_5/", "data": "BPIC15_5"})
 DATA_DESC.append({"folder": "bpic12w/", "data": "BPIC12W"})
 DATA_DESC.append({"folder": "bpic12/", "data": "BPIC12"})
 DATA_DESC.append({"folder": "helpdesk/", "data": "HELPDESK"})
+DATA_DESC.append({"folder": "nasa/", "data": "NASA"})
+DATA_DESC.append({"folder": "labour/", "data": "LABOUR"})
+DATA_DESC.append({"folder": "weekend/", "data": "WEEKEND"})
 # DATA_DESC.append({"folder": "bpic18/", "data": "BPIC18"})
 # DATA_DESC.append({"folder": "bpic18s/", "data": "BPIC18S"})
 # DATA_DESC.append({"folder": "bpic18m/", "data": "BPIC18M"})
@@ -57,6 +60,15 @@ DIMAURO_PARAMS["BPIC15_5"] = {'batch_size': 10, 'embedding_size': 195, 'input_le
 DIMAURO_PARAMS["HELPDESK"] = {'batch_size': 9, 'embedding_size': 7, 'input_length': 14,
                               'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 13,
                               'n_modules': 2, 'vocab_size': 14}
+DIMAURO_PARAMS["NASA"] = {'batch_size': 9, 'embedding_size': 7, 'input_length': 14,
+                              'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 13,
+                              'n_modules': 2, 'vocab_size': 2}
+DIMAURO_PARAMS["LABOUR"] = {'batch_size': 9, 'embedding_size': 7, 'input_length': 14,
+                              'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 13,
+                              'n_modules': 2, 'vocab_size': 2}
+DIMAURO_PARAMS["WEEKEND"] = {'batch_size': 9, 'embedding_size': 7, 'input_length': 14,
+                              'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 13,
+                              'n_modules': 2, 'vocab_size': 2}
 DIMAURO_PARAMS["BPIC18"] = {'batch_size': 9, 'embedding_size': 21, 'input_length': 2973,
                               'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 42,
-                              'n_modules': 2, 'vocab_size': 42}
+                              'n_modules': 2, 'vocab_size': 14}

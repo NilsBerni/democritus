@@ -1,9 +1,9 @@
 import sys
 
-from Predictions.BPM2020.Experiments_NextEvent import run_nextevent_pred
-from Predictions.BPM2020.Experiments_Suffix import run_suffix_pred
-from Predictions.BPM2020.Experiments_Train import run_training
-from Predictions.BPM2020.Experiments_Variables import CAMARGO, DIMAURO, EDBN, LIN, TAX
+from Predictions.Execution.Experiments_NextEvent import run_nextevent_pred
+from Predictions.Execution.Experiments_Suffix import run_suffix_pred
+from Predictions.Execution.Experiments_Train import run_training
+from Predictions.Execution.Experiments_Variables import CAMARGO, DIMAURO, EDBN, LIN, TAX
 from Predictions.DataProcessing import BPIC12, BPIC12W, BPIC15_1, BPIC15_2, BPIC15_3, BPIC15_4, BPIC15_5, HELPDESK, WEEKEND, LABOUR
 
 

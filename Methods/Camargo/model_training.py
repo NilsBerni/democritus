@@ -14,8 +14,8 @@ import numpy as np
 import pandas as pd
 from nltk.util import ngrams
 
-from RelatedMethods.Camargo.models import model_shared_cat as mshcat
-from RelatedMethods.Camargo.models import model_specialized as msp
+from Methods.Camargo.models import model_shared_cat as mshcat
+from Methods.Camargo.models import model_specialized as msp
 
 
 def training_model(log, event_emb, role_emb, args, epochs, early_stop):

@@ -1,7 +1,7 @@
 from Utils.LogFile import LogFile
-from RelatedMethods.EDBN.Execute import train as edbn_train
-from RelatedMethods.EDBN.Execute import update as edbn_update
-from RelatedMethods.EDBN.LearnBayesianStructure import Structure_learner
+from Methods.EDBN.Execute import train as edbn_train
+from Methods.EDBN.Execute import update as edbn_update
+from Methods.EDBN.LearnBayesianStructure import Structure_learner
 from Predictions.eDBN_Prediction import predict_next_event, predict_next_event_update
 
 def train(log):

@@ -8,7 +8,7 @@ from sklearn.metrics import accuracy_score
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
 from tensorflow.keras.utils import to_categorical
 
-from RelatedMethods.DiMauro.deeppm_act import fit_and_score, get_model
+from Methods.DiMauro.deeppm_act import fit_and_score, get_model
 from Utils.LogFile import LogFile
 
 

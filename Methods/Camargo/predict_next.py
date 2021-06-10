@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
 
-from RelatedMethods.Camargo.support_modules import support as sup
+from Methods.Camargo.support_modules import support as sup
 
 START_TIMEFORMAT = ''
 INDEX_AC = None

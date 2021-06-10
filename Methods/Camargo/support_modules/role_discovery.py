@@ -7,7 +7,7 @@ import networkx as nx
 import scipy
 from scipy.stats import pearsonr
 
-from RelatedMethods.Camargo.support_modules import support as sup
+from Methods.Camargo.support_modules import support as sup
 
 
 # == support

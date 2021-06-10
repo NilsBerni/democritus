@@ -13,7 +13,7 @@ import numpy as np
 from tensorflow.keras.layers import Input, Embedding, Dot, Reshape
 from tensorflow.keras.models import Model
 
-from RelatedMethods.Camargo.support_modules import support as sup
+from Methods.Camargo.support_modules import support as sup
 
 
 def training_model(log, outfile):

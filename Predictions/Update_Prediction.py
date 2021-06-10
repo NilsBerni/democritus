@@ -1,5 +1,5 @@
 from Utils.LogFile import LogFile
-from RelatedMethods.EDBN.Execute import train as edbn_train
+from Methods.EDBN.Execute import train as edbn_train
 from Predictions.eDBN_Prediction import predict_next_event, predict_next_event_update, predict_next_event_multi
 
 import matplotlib.pyplot as plt

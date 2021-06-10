@@ -1,7 +1,7 @@
 from Utils.LogFile import LogFile
 from Predictions import edbn_adapter as edbn
 from Predictions import base_adapter as baseline
-from RelatedMethods.DiMauro import adapter as dimauro
+from Methods.DiMauro import adapter as dimauro
 
 if __name__ == "__main__":
     """

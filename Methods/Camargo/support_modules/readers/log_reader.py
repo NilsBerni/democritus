@@ -5,7 +5,7 @@ import gzip
 import os
 import xml.etree.ElementTree as ET
 import zipfile as zf
-from operator import itemgetterfrom RelatedMethods.Camargo.support_modules import support as sup
+from operator import itemgetterfrom Methods.Camargo.support_modules import support as sup
 
 
 class LogReader(object):

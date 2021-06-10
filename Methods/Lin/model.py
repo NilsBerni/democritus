@@ -16,7 +16,7 @@ from tensorflow.keras.layers import Input, Embedding, Dropout, Concatenate, LSTM
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.optimizers import Nadam
 
-from RelatedMethods.Lin.Modulator import Modulator
+from Methods.Lin.Modulator import Modulator
 
 
 def create_model_cudnn(vec, vocab_act_size, vocab_role_size, output_folder):

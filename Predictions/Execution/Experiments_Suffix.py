@@ -9,7 +9,7 @@
                 * second extra argument: use "next" when training optimized for next event, use "suffix" for suffix
         - CAMARGO: specify architecture to use: chared_cat or specialized
 
-
+    Author: Stephen Pauwels
 """
 
 import os
@@ -17,14 +17,14 @@ import pickle
 import sys
 import time
 
-from BPM2020.Experiments_Variables import DATA_DESC, DATA_FOLDER, OUTPUT_FOLDER
-from BPM2020.Experiments_Variables import EDBN, CAMARGO, DIMAURO, LIN, TAX
-from BPM2020.Experiments_Variables import K_EDBN
+from Predictions.Execution.Experiments_Variables import DATA_DESC, DATA_FOLDER, OUTPUT_FOLDER
+from Predictions.Execution.Experiments_Variables import EDBN, CAMARGO, DIMAURO, LIN, TAX
+from Predictions.Execution.Experiments_Variables import K_EDBN
 from Utils.LogFile import LogFile
 
 
 def test_edbn(dataset_folder, model_folder, k=None):
-    from RelatedMethods.EDBN_Prediction import predict_suffix
+    from Predictions.eDBN_Prediction import predict_suffix
 
     model_file = os.path.join(model_folder, "model")
 
@@ -54,7 +54,7 @@ def test_edbn(dataset_folder, model_folder, k=None):
 
 
 def test_camargo(dataset_folder, model_folder, architecture):
-    from predict_suffix_full import predict_suffix_full
+    from Methods.Camargo.predict_suffix_full import predict_suffix_full
 
     model_file = sorted([model_file for model_file in os.listdir(model_folder) if model_file.endswith(".h5")])[-1]
 
@@ -62,7 +62,7 @@ def test_camargo(dataset_folder, model_folder, architecture):
 
 
 def test_lin(dataset_folder, model_folder):
-    from RelatedMethods.Lin.model import predict_suffix
+    from Methods.Lin.model import predict_suffix
 
     logfile = LogFile(dataset_folder + "full_log.csv", ",", 0, None, None, "case",
                         activity_attr="event", convert=False, k=0)
@@ -82,7 +82,7 @@ def test_lin(dataset_folder, model_folder):
 
 
 def test_dimauro(dataset_folder, model_folder):
-    from RelatedMethods.DiMauro.deeppm_act import predict_suffix
+    from Methods.DiMauro.deeppm_act import predict_suffix
 
     model_file = sorted([model_file for model_file in os.listdir(model_folder) if model_file.endswith(".h5")])[-1]
     acc = predict_suffix(dataset_folder + "train_log.csv", dataset_folder + "test_log.csv", os.path.join(model_folder, model_file))
@@ -90,8 +90,8 @@ def test_dimauro(dataset_folder, model_folder):
         fout.write("Accuracy: (%s) %s\n" % (time.strftime("%d-%m-%y %H:%M:%S", time.localtime()), acc))
 
 def test_tax(dataset_folder, model_folder):
-    from RelatedMethods.Tax.code.evaluate_suffix_and_remaining_time import evaluate
-    from RelatedMethods.Tax.code.calculate_dl_on_suffix import calc_dl
+    from Methods.Tax.code.evaluate_suffix_and_remaining_time import evaluate
+    from Methods.Tax.code.calculate_dl_on_suffix import calc_dl
 
     train_log = os.path.join(dataset_folder, "train_log.csv")
     test_log = os.path.join(dataset_folder, "test_log.csv")
@@ -102,7 +102,11 @@ def test_tax(dataset_folder, model_folder):
     with open(os.path.join(model_folder, "results_suffix.log"), "a") as fout:
         fout.write("Similarity: (%s) %s\n" % (time.strftime("%d-%m-%y %H:%M:%S", time.localtime()), dam_levenstein))
 
+
 def main(argv):
+    run_suffix_pred(argv)
+
+def run_suffix_pred(argv):
     if len(argv) < 2:
         print("Missing arguments, expected: METHOD and DATA")
         return

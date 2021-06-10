@@ -1,4 +1,4 @@
-from RelatedMethods.EDBN.Execute import train as edbn_train
+from Methods.EDBN.Execute import train as edbn_train
 from LogFile import LogFile
 import numpy as np
 
