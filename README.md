@@ -17,8 +17,8 @@ This framework is currently able to predict:
  - Next activity
  - Suffix
 
-![](Advise.gif)
-![Alt Text](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
+
+![Advisor](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
  
 ## !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
