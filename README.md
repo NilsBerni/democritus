@@ -24,7 +24,9 @@ This framework is currently able to predict:
 
 
  
-## !!!WARNING!!!
+## User Manual
+
+### !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
 Due to its long execution times, testing all event logs, implementations and parameters would take multiple person-months.
 To produce results for multiple implementations and event logs. Please run the Predictions/Execution/Experiments.py. 
