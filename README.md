@@ -26,17 +26,35 @@ This framework is currently able to predict:
 ## User Manual
 
 ### Downloads for Testing and Performing Experiments
-- [Raw Datasets](hhttps://github.com/NilsBerni/RealLifeEventLogs): Contains all raw data we used and tested.
+- [Raw Datasets](https://github.com/NilsBerni/RealLifeEventLogs): Contains all raw data we used and tested.
 
 ### Applying the User Interface
+The user interface is more of a concept than that. We can already use it productively in its current state. However, the user interface is not a mockup; if enough tested on different devices, we can use it to use productivity software. The interface is currently using models and training results in the cache to demonstrate its functionality. 
 
 ### Applying the Framework
+There are vital functions that we can apply to perform all the different implementations. There are vital functions that we can apply to perform all the different implementations. All the functions use similar arguments: 
+
+- *Arg0* (Implementation): "TAX
+" || "DIMAURO" || "EDBN" || "LIN" || "CAMARGO"
+- *Arg1* (Event Log): i. e. ''HELPDESK"
+- *Arg2* (Optional model specific Parameter): i. e. "shared_cat"
+
+We can specify additional Parameters, i. e. batch size and epochs in the files in the execution folder.
+
+#### Training
+- run_training(argv) 
+
+#### Suffix Prediction
+- run_nextevent_pred(argv) 
+
+#### Next Activity Prediction
+- run_suffix_pred(argv) 
 
 
 ### !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
 Due to its long execution times, testing all event logs, implementations and parameters would take multiple person-months.
-To produce results for multiple implementations and event logs. Please run the Predictions/Execution/Experiments.py. 
+To produce results for multiple implementations and event logs, please run [Experiments](https://github.com/NilsBerni/democritus/blob/master/Predictions/Execution/Experiment.py).
 Another advantage of using this file is that it will automatically start the next prediction/training as soon as one is completed.
 However, from experience, the script will run at least one week on a personal computer to produce results for all the methods.
 
