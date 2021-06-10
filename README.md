@@ -32,15 +32,15 @@ Another advantage of using this file is that it will automatically start the nex
 However, from experience, the script will run at least one week on a personal computer to produce results for all the methods.
 
 ## Project Structure
-- [App](https://github.com/NilsBerni/democritus/Anomalies): Contains all wrappers used to run the application.
-- [Utils](https://github.com/NilsBerni/democritus/Utils): Some extra implementations regarding datastructures, preprocessing and data generation
-- [Data](https://github.com/NilsBerni/democritus/Data): Data used for the experiments 
-- [Methods](https://github.com/NilsBerni/democritus/Methods): Implementations of the other methods used to run the comparison experiments with
-    - [Camargo](https://github.com/NilsBerni/democritus/Methods/Camargo): Contains the slightly adapted implementation used in [1]
-    - [DiMauro](https://github.com/NilsBerni/democritus/Methods/DiMauro): Implementation used in [2]
-    - [Lin](https://github.com/NilsBerni/democritus/Methods/Lin): Our implementation of the method described in [3]
-    - [Tax](https://github.com/NilsBerni/democritus/Methods/Tax): Adapted implementation used in [4]
-    - [Pauwels](https://github.com/NilsBerni/democritus/Methods/eDBN): Contains implementation used in [5]
+- [App](https://github.com/NilsBerni/democritus/tree/master/app): Contains all wrappers used to run the application.
+- [Utils](https://github.com/NilsBerni/democritus/tree/master/Utils): Some extra implementations regarding datastructures, preprocessing and data generation
+- [Data](https://github.com/NilsBerni/democritus/tree/master/Data): Data used for the experiments 
+- [Methods](https://github.com/NilsBerni/democritus/tree/master/Methods): Implementations of the other methods used to run the comparison experiments with
+    - [Camargo](https://github.com/NilsBerni/democritus/tree/master/Methods/Camargo): Contains the slightly adapted implementation used in [1]
+    - [DiMauro](https://github.com/NilsBerni/democritus/tree/master/Methods/DiMauro): Implementation used in [2]
+    - [Lin](https://github.com/NilsBerni/democritus/tree/master/Methods/Lin): Our implementation of the method described in [3]
+    - [Tax](https://github.com/NilsBerni/democritus/tree/master/Methods/Tax): Adapted implementation used in [4]
+    - [Pauwels](https://github.com/NilsBerni/democritus/tree/master/Methods/eDBN): Contains implementation used in [5]
 
 ## References
 1. Pauwels, Stephen, and Toon Calders. "Incremental Predictive Process Monitoring: The Next Activity Case" Accepted for BPM 2021.
