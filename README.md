@@ -3,7 +3,7 @@
 We remember Democritus for his formulation of an atomic theory and this stunning quote: “Nothing exists except atoms and space, everything else is opinion.”
 This means that we can never be sure of what we are thinking. Truth is at the level of atoms since there is nothing else but void, atoms and their interactions. What we believe is a result of these interactions, and we only get this result. We imagine that all of this depends on the interaction of atoms that we cannot get to since they remain in the depths. 
 Democritus, therefore, was skeptical of our ability to know anything with certainty. Neural networks can help us to understand these interactions and make predictions about future atomic interactions on a higher level. 
-With our imperfect understanding of atomic interactions, we can use predictive process monitoring to understand and predict probabilistic human process interactions on a higher level.
+With our imperfect understanding of atomic interactions, we can use predictive process monitoring to understand and predict probabilistic human process interactions on a higher level. This tool makes it easy to leverage the training and application of different state-of-the-art approaches.
 
 
 ## Functionalities
