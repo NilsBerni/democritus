@@ -25,13 +25,17 @@ def main(argv):
                 if imp is EDBN:
                     argv = [imp, log, 3, 'NEXT']
 
-                # run_training(argv)
+                # Train model
+                run_training(argv)
 
-                # run_nextevent_pred(argv)
+                # Predict next activity
+                run_nextevent_pred(argv)
 
                 if imp is not DIMAURO:
                     if imp is EDBN:
                        argv = [imp, log, 3, 'SUFFIX']
+
+                    # predict suffix
                     run_suffix_pred(argv)
 
 if __name__ == "__main__":
