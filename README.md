@@ -40,7 +40,7 @@ However, from experience, the script will run at least one week on a personal co
     - [DiMauro](https://github.com/NilsBerni/democritus/tree/master/Methods/DiMauro): Implementation used in [2]
     - [Lin](https://github.com/NilsBerni/democritus/tree/master/Methods/Lin): Our implementation of the method described in [3]
     - [Tax](https://github.com/NilsBerni/democritus/tree/master/Methods/Tax): Adapted implementation used in [4]
-    - [Pauwels](https://github.com/NilsBerni/democritus/tree/master/Methods/eDBN): Contains implementation used in [5]
+    - [Pauwels](https://github.com/NilsBerni/democritus/tree/master/Methods/EDBN): Contains implementation used in [5]
 
 ## References
 1. Pauwels, Stephen, and Toon Calders. "Incremental Predictive Process Monitoring: The Next Activity Case" Accepted for BPM 2021.
