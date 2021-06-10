@@ -34,8 +34,8 @@ The user interface is more of a concept than that. We can already use it product
 ### Applying the Framework
 There are vital functions that we can apply to perform all the different implementations. There are vital functions that we can apply to perform all the different implementations. All the functions use similar arguments: 
 
-- *Arg0* (Implementation): ["TAX
-", "DIMAURO", "EDBN", "LIN", "TAX"]
+- *Arg0* (Implementation): "TAX
+" || "DIMAURO" || "EDBN" || "LIN" || "TAX"
 - *Arg1* (Event Log): i. e. ''HELPDESK"
 - *Arg2* (Optional model specific Parameter): i. e. "shared_cat"
 
