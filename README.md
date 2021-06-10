@@ -37,7 +37,7 @@ The user interface is more of a concept than that. We can already use it product
 ### !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
 Due to its long execution times, testing all event logs, implementations and parameters would take multiple person-months.
-To produce results for multiple implementations and event logs. Please run [Experiments](https://github.com/NilsBerni/democritus/blob/master/Predictions/Execution/Experiment.py).
+To produce results for multiple implementations and event logs, please run [Experiments](https://github.com/NilsBerni/democritus/blob/master/Predictions/Execution/Experiment.py).
 Another advantage of using this file is that it will automatically start the next prediction/training as soon as one is completed.
 However, from experience, the script will run at least one week on a personal computer to produce results for all the methods.
 
