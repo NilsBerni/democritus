@@ -12,6 +12,7 @@ All experiments in the paper can be reproduced using the files in the App direct
 This framework can:
  - Analyze event logs and display their characteristics
  - Suggest a specific implementation for PPM using NN
+ - Train neural network models with event logs
 
 This framework is currently able to predict:
  - Next activity
@@ -19,6 +20,9 @@ This framework is currently able to predict:
 
 
 ![Advisor](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
+![Predict](https://media.giphy.com/media/icSL0aOv32yCh5p88D/giphy.gif)
+
+
  
 ## !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
