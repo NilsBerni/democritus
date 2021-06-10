@@ -17,7 +17,7 @@ This framework is currently able to predict:
  - Next activity
  - Suffix
 
-![](name-of-giphy.gif)
+![](Advise.gif)
  
 ## !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
