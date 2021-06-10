@@ -33,6 +33,12 @@ The user interface is more of a concept than that. We can already use it product
 
 ### Applying the Framework
 
+#### Training
+
+#### Suffix Prediction
+
+#### Next Activity Prediction
+
 
 ### !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
