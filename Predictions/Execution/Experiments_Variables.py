@@ -20,10 +20,6 @@ DATA_DESC.append({"folder": "helpdesk/", "data": "HELPDESK"})
 DATA_DESC.append({"folder": "nasa/", "data": "NASA"})
 DATA_DESC.append({"folder": "labour/", "data": "LABOUR"})
 DATA_DESC.append({"folder": "weekend/", "data": "WEEKEND"})
-# DATA_DESC.append({"folder": "bpic18/", "data": "BPIC18"})
-# DATA_DESC.append({"folder": "bpic18s/", "data": "BPIC18S"})
-# DATA_DESC.append({"folder": "bpic18m/", "data": "BPIC18M"})
-# DATA_DESC.append({"folder": "bpic18l/", "data": "BPIC18L"})
 
 # Location to output the splitted log files
 DATA_FOLDER = "../../Data/PredictionData/"
@@ -69,6 +65,3 @@ DIMAURO_PARAMS["LABOUR"] = {'batch_size': 9, 'embedding_size': 7, 'input_length'
 DIMAURO_PARAMS["WEEKEND"] = {'batch_size': 9, 'embedding_size': 7, 'input_length': 14,
                               'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 13,
                               'n_modules': 2, 'vocab_size': 2}
-DIMAURO_PARAMS["BPIC18"] = {'batch_size': 9, 'embedding_size': 21, 'input_length': 2973,
-                              'learning_rate': 0.0008106393532786784, 'model_type': 'ACT', 'n_classes': 42,
-                              'n_modules': 2, 'vocab_size': 14}
