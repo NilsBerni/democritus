@@ -11,20 +11,19 @@
     <section class="contact-clean" style="background: rgb(241, 247, 252);">
         <form action = "/advise"  method="post" enctype = "multipart/form-data">
             <h1 style="text-align: center;">Advisor</h1>
-            <h4 class="text-center" style="text-align: center;height: 99px;">Find the right suggestion for your event log based on author suggestions and literature. </h4>
+            <h4 class="text-center" style="text-align: center;height: 99px;">Find the right approach for your event log. </h4>
             <strong></strong>
             <strong>PREDICTION TYPE</strong>
             <div class="form-group"><select class="form-control" name="tvalue">
-              <optgroup name="comp_select" label="This is a group">
-                  <option value="suffix" selected>Suffix</option>
-                  <option value="event">Next Activity</option>
-                  <option value="duration">Remaining Time</option>
+              <optgroup name="comp_select" label="Prediction Type">
+                  <option value="next" selected>Next Activity</option>
+                  <option value="suffix">Suffix</option>
               </optgroup>
             </select></div>
             <strong>EVENT LOG UPLOAD</strong>
             <div class="form-group"><input type="file" name = "file" class="form-control-file" /></div><strong></strong>
             <div class="form-group"><small class="form-text text-danger"></small></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit">RUN </button></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">ADVISE </button></div>
         </form>
     </section>
 </body>

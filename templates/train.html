@@ -8,30 +8,41 @@
     <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
-<body>
+<body style="background: rgb(241,247,252);">
     <section class="contact-clean">
-        <form method="post">
+        <form action = "/running/train"  method="post" enctype = "multipart/form-data">
             <h1 style="text-align: center;">Train</h1>
-            <h4 class="text-center" style="text-align: center;height: 99px;">Train previously uploaded event logs</h4>
+            <h4 class="text-center" style="text-align: center;height: 99px;">Train previously uploaded event logs.</h4>
             </div><strong>EVENT LOG</strong>
-            <div class="form-group"><select class="form-control">
-                    <optgroup label="This is a group">
-                        <option value="12" selected>Helpdesk</option>
-                        <option value="13">BPIC12</option>
-                        <option value="14">BPIC12W</option>
+            <div class="form-group">
+                <select class="form-control" name="data">>
+                    <optgroup label="Event Log">
+                        <option value="BPIC12">BPIC12</option>
+                        <option value="BPIC12W">BPIC12W</option>
+                        <option value="BPIC15_1">BPIC15_1</option>
+                        <option value="BPIC15_2">BPIC15_2</option>
+                        <option value="BPIC15_3">BPIC15_3</option>
+                        <option value="BPIC15_4">BPIC15_4</option>
+                        <option value="BPIC15_5">BPIC15_5</option>
+                        <option value="HELPDESK" selected>Helpdesk</option>
+                        <option value="LABOUR">Labour</option>
+                        <option value="WEEKEND">Weekend</option>
                     </optgroup>
                 </select>
             </div><strong>IMPLEMENTATION</strong>
-            <div class="form-group"><select class="form-control">
-                    <optgroup label="This is a group">
-                        <option value="12" selected>Camargo</option>
-                        <option value="13">Tax</option>
-                        <option value="14">Lin</option>
+            <div class="form-group">
+                <select class="form-control" name="method">
+                    <optgroup label="Select Implementation">
+                        <option value="TAX" selected>Tax</option>
+                        <option value="LIN">Lin</option>
+                        <option value="DIMAURO">DiMauro</option>
+                        <option value="CAMARGO">Camargo</option>
+                        <option value="EDBN">Pauwels</option>
                     </optgroup>
                 </select>
             </div><strong></strong><strong></strong>
             <div class="form-group"><small class="form-text text-danger"></small></div>
-            <div class="form-group"><button class="btn btn-primary" type="submit">RUN </button></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">TRAIN </button></div>
         </form>
     </section>
 </body>
