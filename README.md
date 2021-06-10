@@ -46,8 +46,8 @@ However, from experience, the script will run at least one week on a personal co
     - [Pauwels](https://github.com/NilsBerni/democritus/tree/master/Methods/EDBN): Contains implementation used in [5]
 
 ## References
-1. Pauwels, Stephen, and Toon Calders. "Incremental Predictive Process Monitoring: The Next Activity Case" Accepted for BPM 2021.
-2. Camargo, M., Dumas, M., Gonz ́alez-Rojas, O.: Learning accurate lstm models ofbusiness processes. In: International Conference on Business Process Management.pp. 286–302. Springer (2019)
-3. Di  Mauro,  N.,  Appice,  A.,  Basile,  T.M.:  Activity  prediction  of  business  processinstances  with  inception  cnn  models.  In:  International  Conference  of  the  ItalianAssociation for Artificial Intelligence. pp. 348–361. Springer (2019)
-4. Lin, L., Wen, L., Wang, J.: Mm-pred: a deep predictive model for multi-attributeevent  sequence.  In:  Proceedings  of  the  2019  SIAM  International  Conference  onData Mining. pp. 118–126. SIAM (2019)
-5. Tax, N., Verenich, I., La Rosa, M., Dumas, M.: Predictive business process mon-itoring with lstm neural networks. In: International Conference on Advanced In-formation Systems Engineering. pp. 477–492. Springer (2017)
+1. Camargo, Manuel \& Dumas, Marlon \& González-Rojas, Oscar. (2019). Learning Accurate LSTM Models of Business Processes. 10.1007/978-3-030-26619-6\_19.
+2. Di Mauro, Nicola \& Appice, Annalisa \& Basile, Teresa. (2019). Activity Prediction of Business Process Instances with Inception CNN Models. 10.1007/978-3-030-35166-3\_25.
+3. Lin, Li \& Wen, Lijie \& Wang, Jianmin. (2019). MM-Pred: A Deep Predictive Model for Multi-attribute Event Sequence. 10.1137/1.9781611975673.14. 
+4. Tax, Niek \& Verenich, Ilya \& La Rosa, Marcello \& Dumas, Marlon. (2017). Predictive Business Process Monitoring with LSTM Neural Networks. 477-492. 10.1007/978-3-319-59536-8\_30.
+5. Pauwels, Stephen \& Calders, Toon. (2020). Bayesian Network Based Predictions of Business Processes. 10.1007/978-3-030-58638-6\_10. 
