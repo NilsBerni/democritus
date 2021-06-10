@@ -25,6 +25,14 @@ This framework is currently able to predict:
  
 ## User Manual
 
+### Downloads for Testing and Performing Experiments
+- [Raw Datasets](hhttps://github.com/NilsBerni/RealLifeEventLogs): Contains all raw data we used and tested.
+
+### Applying the User Interface
+
+### Applying the Framework
+
+
 ### !!!WARNING!!!
 We cannot guarantee a stable execution over the user interface. 
 Due to its long execution times, testing all event logs, implementations and parameters would take multiple person-months.
